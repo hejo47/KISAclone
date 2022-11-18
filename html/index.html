@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
@@ -26,12 +27,26 @@
   </head>
   <body>
     <div class="container">
+      <header>header</header>
       <div id="fullpage" class="section-container">
-        <section class="section">1</section>
+        <section class="section">
+          <ul class="main_slide_wrapper">
+            <li class="main_slide1">
+              <img src="../img/main/main_slide_01.jpg" alt="1" />
+            </li>
+            <li class="main_slide2">
+              <img src="../img/main/main_slide_02.jpg" alt="2" />
+            </li>
+            <li class="main_slide3">
+              <img src="../img/main/main_slide_03.jpg" alt="3" />
+            </li>
+          </ul>
+        </section>
         <section class="section">2</section>
         <section class="section">3</section>
       </div>
     </div>
+    <script src="../js/common.js"></script>
     <script>
       $(function () {
         $("#fullpage").fullpage({
