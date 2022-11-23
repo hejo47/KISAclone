@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,11 +33,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
-
     <title>KISA 한국인터넷진흥원</title>
   </head>
   <body>
@@ -257,8 +252,8 @@
       <section class="section second">
         <div class="container">
           <div class="business">
-            <h6 class="business_text">Business</h6>
-            <h2 class="kisa_text">KISA 사업</h2>
+            <h6 class="business_text1">Business</h6>
+            <h2 class="kisa_text1">KISA 사업</h2>
           </div>
           <div class="business_1">
             <span class="number_1">01</span>
@@ -266,7 +261,29 @@
               <h6 class="business_text">Achievements</h6>
               <h2 class="kisa_text">주요성과</h2>
             </div>
-            <div class="second_slide_small"></div>
+            <div class="second_slide_small">
+              <div class="slide_text_small">
+                <p>01. 사이버침해대응본부</p>
+                <span
+                  >사이버 위협으로부터 국가와 국민의 안전을 지키겠습니다.</span
+                >
+              </div>
+              <div class="second_slide_bottom">
+                <a href="#">자세히 보기</a>
+                <div class="btn_wrapper"></div>
+              </div>
+            </div>
+            <div class="second_slide_small2">
+              <div class="small2_text">
+                <h2 class="kisa_text">KISA<br />지식플랫폼</h2>
+                <h6 class="business_text">Knowledge platform</h6>
+                <a href="#" class="search_a">연구보고서</a><br />
+                <a href="#" class="search_b">기술안내서</a>
+              </div>
+              <div class="small2_img">
+                <img src="img/main/ic_ knowledge_1.png" alt="knowledge_1" />
+              </div>
+            </div>
           </div>
           <div class="business_1">
             <span class="number_1">02</span>
@@ -274,9 +291,20 @@
               <h6 class="business_text">Report Hacking</h6>
               <h2 class="kisa_text">해킹신고</h2>
             </div>
-            <div class="second_slide_small">
+            <div class="second_slide_small cyber">
               <ul>
-                <li></li>
+                <li>
+                  <a href="#"><img src="img/main/cyber.jpg" alt="hacking" /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="second_slide_small2">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="img/main/img_hacking_02.jpg" alt="hacking"
+                  /></a>
+                </li>
               </ul>
             </div>
           </div>
@@ -285,6 +313,40 @@
             <div class="second_text">
               <h6 class="business_text">Main Service</h6>
               <h2 class="kisa_text">주요서비스</h2>
+            </div>
+            <div class="service_slider">
+              <ul>
+                <li class="service_item">
+                  <a href="#">
+                    <img src="img/main/icon1.png" /> <span>내PC돌보미</span></a
+                  >
+                </li>
+                <li class="service_item">
+                  <a href="#">
+                    <img src="img/main/icon1.png" /> <span>내PC돌보미</span></a
+                  >
+                </li>
+                <li class="service_item">
+                  <a href="#">
+                    <img src="img/main/icon1.png" /> <span>내PC돌보미</span></a
+                  >
+                </li>
+                <li class="service_item">
+                  <a href="#">
+                    <img src="img/main/icon1.png" /> <span>내PC돌보미</span></a
+                  >
+                </li>
+                <li class="service_item">
+                  <a href="#">
+                    <img src="img/main/icon1.png" /> <span>내PC돌보미</span></a
+                  >
+                </li>
+                <li class="service_item">
+                  <a href="#">
+                    <img src="img/main/icon1.png" /> <span>내PC돌보미</span></a
+                  >
+                </li>
+              </ul>
             </div>
             <!-- <div class="swiper mySwiper">
               <div class="swiper-wrapper">
@@ -310,20 +372,7 @@
           navigationPosition: "right",
           navigationTooltips: ["01 Main", "02 Business", "03 News"],
         });
-        const mySwiper = new Swiper(".swiper", {
-          loop: false,
-          autoplay: true,
-          observer: true,
-          observeParents: true,
-        });
-        const mySwiper2 = new Swiper(".swiper2", {
-          loop: true,
-          autoplay: true,
-          observer: true,
-          observeParents: true,
-        });
       });
     </script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
