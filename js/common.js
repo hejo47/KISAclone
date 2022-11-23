@@ -2,11 +2,21 @@
 const slide1 = document.getElementsByClassName("main_slide1")[0];
 const slide2 = document.getElementsByClassName("main_slide2")[0];
 const slide3 = document.getElementsByClassName("main_slide3")[0];
-console.log(slide1.style);
 
 const slideAction = () => {
-  setInterval(() => (document.slide1.style.opacity = 0), 5000);
+  if (slide1.classList.contains("active")) {
+    slide1.classList.remove("active");
+    slide2.classList.add("active");
+  } else if (slide2.classList.contains("active")) {
+    slide2.classList.remove("active");
+    slide3.classList.add("active");
+  } else if (slide3.classList.contains("active")) {
+    slide3.classList.remove("active");
+    slide1.classList.add("active");
+  }
 };
+
+setInterval(slideAction, 5000);
 
 /* HEADER */
 const header = document.getElementsByTagName("header")[0];
@@ -47,15 +57,15 @@ header.addEventListener("mouseout", headerNonActive);
 $(function () {
   $(".depth1").each(function () {
     let tg = $(this);
-    console.log(tg);
+    // console.log(tg);
     tg.mouseover(function () {
       tg.find(".depth2_bg").addClass("active");
-      console.log(tg.find(".depth2_bg"));
+      // console.log(tg.find(".depth2_bg"));
     });
     tg.mouseout(function () {
       // $(this).find(".depth2_bg").stop().slideUp();
       tg.find(".depth2_bg").removeClass("active");
     });
   });
-  console.log(1);
+  // console.log(1);
 });

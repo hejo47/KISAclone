@@ -231,6 +231,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   top: 0;
   left: 0;
   overflow: hidden;
+  transition: 0.7s ease all;
 }
 .main_slide_wrapper li img {
   height: 100%;
@@ -239,6 +240,12 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 .main_slide_wrapper .main_slide2,
 .main_slide_wrapper .main_slide3 {
   opacity: 0;
+}
+/* .main_slide_wrapper. .slide.active {
+  opacity 1;
+} */
+.main_slide_wrapper li.active {
+  opacity: 1;
 }
 
 /* SECOND PAGE */
