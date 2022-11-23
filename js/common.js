@@ -33,14 +33,29 @@ header.addEventListener("mouseout", headerNonActive);
 // };
 // depth1.addEventListener("mouseover", menuDropDown);
 // depth1.addEventListener("mouseout", menuUp);
+// $(function () {
+//   $(".depth1")
+//     .mouseover(function () {
+//       $(this).find(".depth2_bg").stop().show();
+//       console.log($(this).find(".depth2_bg"));
+//     })
+//     .mouseout(function () {
+
+//     });
+//   console.log(1);
+// });
 $(function () {
-  $(".depth1")
-    .mouseover(function () {
-      $(this).find(".depth2_bg").stop().show();
-      console.log($(this).find(".depth2_bg"));
-    })
-    .mouseout(function () {
-      // $(this).find(".depth2_bg").stop().slideUp();
+  $(".depth1").each(function () {
+    let tg = $(this);
+    console.log(tg);
+    tg.mouseover(function () {
+      tg.find(".depth2_bg").addClass("active");
+      console.log(tg.find(".depth2_bg"));
     });
+    tg.mouseout(function () {
+      // $(this).find(".depth2_bg").stop().slideUp();
+      tg.find(".depth2_bg").removeClass("active");
+    });
+  });
   console.log(1);
 });

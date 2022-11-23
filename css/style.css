@@ -213,6 +213,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 /* DROPDOWN MENU */
 .active {
   visibility: visible;
+  display: flex;
 }
 
 /* FIRST PAGE */
