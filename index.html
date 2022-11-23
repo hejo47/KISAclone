@@ -33,6 +33,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
     <title>KISA 한국인터넷진흥원</title>
   </head>
   <body>
@@ -230,19 +235,67 @@
         <ul class="main_slide_wrapper">
           <li class="main_slide1 active">
             <img src="../img/main/main_slide_01.jpg" alt="1" />
+            <div class="slide_text container">
+              <p class="slide_p">Korea Internet & Security Agency</p>
+              <p class="main_slide_p">
+                [<span class="slide_blue">KISA</span>]는 <br />안전하고 신뢰할
+                수 있는<br />
+                <span class="slide_green">디지털 미래사회</span>를 선도합니다
+              </p>
+            </div>
           </li>
           <li class="main_slide2">
             <img src="../img/main/main_slide_02.jpg" alt="2" />
+            <p>Korea Internet & Security Agency</p>
           </li>
           <li class="main_slide3">
             <img src="../img/main/main_slide_03.jpg" alt="3" />
+            <p>Korea Internet & Security Agency</p>
           </li>
         </ul>
       </section>
       <section class="section second">
         <div class="container">
-          <h6 class="business_text">Business</h6>
-          <h2 class="kisa_text">KISA 사업</h2>
+          <div class="business">
+            <h6 class="business_text">Business</h6>
+            <h2 class="kisa_text">KISA 사업</h2>
+          </div>
+          <div class="business_1">
+            <span class="number_1">01</span>
+            <div class="second_text">
+              <h6 class="business_text">Achievements</h6>
+              <h2 class="kisa_text">주요성과</h2>
+            </div>
+            <div class="second_slide_small"></div>
+          </div>
+          <div class="business_1">
+            <span class="number_1">02</span>
+            <div class="second_text">
+              <h6 class="business_text">Report Hacking</h6>
+              <h2 class="kisa_text">해킹신고</h2>
+            </div>
+            <div class="second_slide_small">
+              <ul>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="business_1">
+            <span class="number_1">03</span>
+            <div class="second_text">
+              <h6 class="business_text">Main Service</h6>
+              <h2 class="kisa_text">주요서비스</h2>
+            </div>
+            <!-- <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">1</div>
+                <div class="swiper-slide">2</div>
+                <div class="swiper-slide">3</div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div> -->
+          </div>
         </div>
       </section>
       <section class="section third">3</section>
@@ -257,7 +310,20 @@
           navigationPosition: "right",
           navigationTooltips: ["01 Main", "02 Business", "03 News"],
         });
+        const mySwiper = new Swiper(".swiper", {
+          loop: false,
+          autoplay: true,
+          observer: true,
+          observeParents: true,
+        });
+        const mySwiper2 = new Swiper(".swiper2", {
+          loop: true,
+          autoplay: true,
+          observer: true,
+          observeParents: true,
+        });
       });
     </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
