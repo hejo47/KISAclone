@@ -31,6 +31,30 @@ const headerNonActive = () => {
 header.addEventListener("mouseover", headerActive);
 header.addEventListener("mouseout", headerNonActive);
 
+//마우스가 특정 아티클 부분에 있을 때 배경화면 바뀌기(3개뿐이니까.....)
+const business1 = document.getElementsByClassName("business_1")[0];
+const business2 = document.getElementsByClassName("business_1")[1];
+const business3 = document.getElementsByClassName("business_1")[2];
+const bgImg = document.querySelector(".section.second");
+const change1 = () => {
+  bgImg.style.backgroundImage = "url(../img/main/second_page_img_01.png)";
+};
+const change2 = () => {
+  bgImg.style.backgroundImage = "url(../img/main/second_page_img_02.png)";
+};
+const change3 = () => {
+  bgImg.style.backgroundImage = "url(../img/main/second_page_img_03.png)";
+};
+business1.addEventListener("mouseover", change1);
+business2.addEventListener("mouseover", change2);
+business3.addEventListener("mouseover", change3);
+
+//버튼을 누르면 슬라이드
+const prev = document.querySelector(".btn_wrapper .prev");
+const next = document.querySelector(".btn_wrapper .next");
+const pause = document.querySelector(".btn_wrapper .pause");
+// 자동 슬라이드
+
 //스크롤이 섹션 3에 있을 때 헤더에 액티브 주기
 // new fullpage("#fullpage", {
 //   onLeave: function (origin, destination, direction, trigger) {
@@ -84,14 +108,4 @@ $(function () {
   // console.log(1);
 });
 
-// SWIPER
-// Swiper - Pause
-const pauseButton = document.getElementById("swiper-pause-button");
-function swiperPause() {
-  if (mainSlider.autoplay.running == false) {
-    mainSlider.autoplay.start();
-  } else if (mainSlider.autoplay.running == true) {
-    mainSlider.autoplay.stop();
-  }
-}
-pauseButton.addEventListener("click", swiperPause);
+//
