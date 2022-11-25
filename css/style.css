@@ -513,3 +513,29 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 .section.third {
   background-color: rgb(233, 239, 250);
 }
+
+/* FOOTER */
+footer {
+  width: 100%;
+}
+.footer_intro {
+}
+.footer_intro .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer_intro .right {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer_intro .right .sns {
+  display: flex;
+  justify-content: center;
+}
+.footer_intro .right .sns li:not(:first-of-type) {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+}
