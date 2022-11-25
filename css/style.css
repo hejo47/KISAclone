@@ -533,15 +533,15 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 .notice_top {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
 }
 .notice {
   width: 50%;
-  border: 1px solid #000;
 }
 .photo_news {
-  width: 50%;
+  width: calc(50% - 60px);
+  margin-left: 60px;
 }
 .sub_title {
   display: flex;
