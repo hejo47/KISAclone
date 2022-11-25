@@ -519,7 +519,8 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 }
 .third_title {
   width: 100%;
-  margin-bottom: 30px;
+  padding-top: 50px;
+  margin-bottom: 20px;
 }
 .third_title h5 {
   font-size: 18px;
@@ -617,7 +618,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   /* flex-wrap: wrap; */
   justify-content: center;
   align-items: flex-start;
-  margin-top: 50px;
+  margin-top: 100px;
   column-gap: 40px;
 }
 .society_wrap {
@@ -644,7 +645,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   background: #fff;
   box-shadow: 5px 3px 1px #ddd;
   border-radius: 20px;
-  padding: 15% 10%;
+  padding: 13.5% 10%;
   column-gap: 30px;
   row-gap: 30px;
 }
