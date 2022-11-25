@@ -37,13 +37,13 @@ const business2 = document.getElementsByClassName("business_1")[1];
 const business3 = document.getElementsByClassName("business_1")[2];
 const bgImg = document.querySelector(".section.second");
 const change1 = () => {
-  bgImg.style.backgroundImage = "url(../img/main/second_page_img_01.png)";
+  bgImg.style.backgroundImage = "url(img/main/second_page_img_01.png)";
 };
 const change2 = () => {
-  bgImg.style.backgroundImage = "url(../img/main/second_page_img_02.png)";
+  bgImg.style.backgroundImage = "url(img/main/second_page_img_02.png)";
 };
 const change3 = () => {
-  bgImg.style.backgroundImage = "url(../img/main/second_page_img_03.png)";
+  bgImg.style.backgroundImage = "url(img/main/second_page_img_03.png)";
 };
 business1.addEventListener("mouseover", change1);
 business2.addEventListener("mouseover", change2);
