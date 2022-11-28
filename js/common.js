@@ -3,20 +3,21 @@ const slide1 = document.getElementsByClassName("main_slide1")[0];
 const slide2 = document.getElementsByClassName("main_slide2")[0];
 const slide3 = document.getElementsByClassName("main_slide3")[0];
 
-// const slideAction = () => {
-//   if (slide1.classList.contains("active")) {
-//     slide1.classList.remove("active");
-//     slide2.classList.add("active");
-//   } else if (slide2.classList.contains("active")) {
-//     slide2.classList.remove("active");
-//     slide3.classList.add("active");
-//   } else if (slide3.classList.contains("active")) {
-//     slide3.classList.remove("active");
-//     slide1.classList.add("active");
-//   }
-// };
+// 봉인 중
+const slideAction = () => {
+  if (slide1.classList.contains("active")) {
+    slide1.classList.remove("active");
+    slide2.classList.add("active");
+  } else if (slide2.classList.contains("active")) {
+    slide2.classList.remove("active");
+    slide3.classList.add("active");
+  } else if (slide3.classList.contains("active")) {
+    slide3.classList.remove("active");
+    slide1.classList.add("active");
+  }
+};
 
-// setInterval(slideAction, 5000);
+setInterval(slideAction, 5000);
 
 /* HEADER */
 const header = document.getElementsByTagName("header")[0];
