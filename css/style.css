@@ -312,7 +312,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 .mainBanner {
   position: absolute;
   right: 15%;
-  bottom: 10%;
+  bottom: 3%;
   width: 1090px;
   height: 670px;
 }
