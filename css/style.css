@@ -283,7 +283,34 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 .main_slide_p .slide_green {
   color: #95c11f;
 }
-
+/* SLIDEBAR */
+.slidebar {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 470px;
+  display: flex;
+}
+.slidebar li:nth-of-type(2) {
+  left: 30px;
+}
+.slidebar li:nth-of-type(3) {
+  left: 60px;
+}
+.slidebar li i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+.slidebar li .circle {
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.slidebar li .circle.active {
+  background: blue;
+}
 /* SECOND PAGE */
 .section.second {
   background-image: url(../img/main/second_page_img_01.png);
