@@ -541,9 +541,28 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   width: 50%;
   border: 1px solid #000;
 }
+.notice_tool {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .notice_menu_list {
   display: flex;
   justify-content: flex-start;
+  border: 1px solid #000;
+}
+.notice_menu_list li {
+  padding: 15px 20px;
+}
+.notice_menu_list li a {
+  font-size: 18px;
+}
+
+.notice_list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .photo_news {
@@ -568,7 +587,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   justify-content: flex-end;
   align-items: center;
   column-gap: 10px;
-  transform: translateY(-10px);
+  /* transform: translateY(-10px); */
 }
 .tool_box li {
   width: 40px;
