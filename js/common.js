@@ -19,6 +19,11 @@ const slideAction = () => {
 
 setInterval(slideAction, 5000);
 
+// 슬라이드 스위치(동작안함)
+const slideprev = document.getElementById("mainSlidePrev");
+const slidepause = document.getElementById("mainSlidePause");
+const slidenext = document.getElementById("mainSlideNext");
+
 /* HEADER */
 const header = document.getElementsByTagName("header")[0];
 const headerActive = () => {
@@ -54,6 +59,7 @@ business3.addEventListener("mouseover", change3);
 const prev = document.querySelector(".btn_wrapper .prev");
 const next = document.querySelector(".btn_wrapper .next");
 const pause = document.querySelector(".btn_wrapper .pause");
+
 // 자동 슬라이드
 
 //스크롤이 섹션 3에 있을 때 헤더에 액티브 주기
@@ -93,6 +99,8 @@ const pause = document.querySelector(".btn_wrapper .pause");
 //     });
 //   console.log(1);
 // });
+
+// HEADER
 $(function () {
   $(".depth1").each(function () {
     let tg = $(this);

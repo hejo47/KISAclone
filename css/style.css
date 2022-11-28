@@ -289,6 +289,8 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   height: 30px;
   position: absolute;
   top: 470px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
 }
 .slidebar li:nth-of-type(2) {
@@ -302,15 +304,77 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   font-size: 30px;
   color: #fff;
 }
-.slidebar li .circle {
-  background: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
+
 .slidebar li .circle.active {
   background: blue;
 }
+/* SLIDEBANNER */
+.mainBanner {
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
+  width: 1090px;
+  height: 670px;
+}
+.mainBanner li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#one_sq {
+  margin-top: 255px;
+  width: 415px;
+  height: 255px;
+}
+#two_sq {
+  margin-top: 95px;
+  width: 255px;
+  height: 415px;
+}
+#three_sq {
+  margin-top: 0px;
+  width: 415px;
+  height: 255px;
+}
+#four_sq {
+  position: absolute;
+  top: 255px;
+  right: 163px;
+  width: 255px;
+  height: 415px;
+}
+
+#one_sq .hover_prev img {
+  width: 415px;
+}
+#two_sq .hover_prev img {
+  width: 255px;
+}
+#three_sq .hover_prev img {
+  width: 415px;
+}
+#four_sq .hover_prev img {
+  width: 255px;
+}
+.hover_prev {
+  position: relative;
+}
+.hover_prev img {
+  position: absolute;
+}
+.hover_img {
+  position: relative;
+  opacity: 0;
+  transition: 0.5s ease all;
+}
+
+.mainBanner li:hover .hover_img {
+  opacity: 1;
+}
+.mainBanner li:hover .hover_prev {
+  opacity: 0;
+}
+
 /* SECOND PAGE */
 .section.second {
   background-image: url(../img/main/second_page_img_01.png);
