@@ -47,15 +47,15 @@ const slidenext = document.getElementById("mainSlideNext");
 
 let isPause = false;
 const mainSlidePauseClick = () => {
-  // if (isPause == false) {
-  //   isPause = true;
-  //   clearInterval(interval);
-  // } else if (isPause == true) {
-  //   interval = setInterval(slideAction, 2000);
-  //   isPause = false;
-  // }
-  isPause ? (interval = setInterval(slideAction, 2000)) : clearInterval(interval);
-  isPause != isPause;
+  if (isPause == false) {
+    isPause = true;
+    clearInterval(interval);
+  } else if (isPause == true) {
+    interval = setInterval(slideAction, 2000);
+    isPause = false;
+  }
+  // isPause ? (interval = setInterval(slideAction, 2000)) : clearInterval(interval);
+  // isPause != isPause;
   // (조건) ? T:F
 };
 
