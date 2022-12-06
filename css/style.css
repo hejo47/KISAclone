@@ -242,16 +242,14 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   height: 100%;
   display: block;
 }
-.main_slide_wrapper .main_slide2,
-.main_slide_wrapper .main_slide3 {
+
+.main_slide_wrapper .main_slide_item {
   opacity: 0;
 }
-/* .main_slide_wrapper. .slide.active {
-  opacity 1;
-} */
-.main_slide_wrapper li.active {
+.main_slide_wrapper .main_slide_item.active {
   opacity: 1;
 }
+
 .main_slide1 {
   position: relative;
 }
@@ -260,7 +258,6 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   max-height: 800px;
   max-width: 1320px;
   position: absolute;
-  /* background: #eee; */
   top: 200px;
   left: 50%;
   transform: translate(-50%, 0);

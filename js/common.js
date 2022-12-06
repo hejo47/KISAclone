@@ -1,40 +1,64 @@
 /* SLIDE */
-const slide1 = document.getElementsByClassName("main_slide1")[0];
-const slide2 = document.getElementsByClassName("main_slide2")[0];
-const slide3 = document.getElementsByClassName("main_slide3")[0];
+// 221206 현재 봉인 중
+// const slide1 = document.getElementsByClassName("main_slide1")[0];
+// const slide2 = document.getElementsByClassName("main_slide2")[0];
+// const slide3 = document.getElementsByClassName("main_slide3")[0];
 
+// const slideAction = () => {
+//   if (slide1.classList.contains("active")) {
+//     slide1.classList.remove("active");
+//     slide2.classList.add("active");
+//   } else if (slide2.classList.contains("active")) {
+//     slide2.classList.remove("active");
+//     slide3.classList.add("active");
+//   } else if (slide3.classList.contains("active")) {
+//     slide3.classList.remove("active");
+//     slide1.classList.add("active");
+//   }
+// };
+
+// let i = 0;
+// const slideAction = () => {
+//   document.getElementsByClassName("main_slide_item")[i].classList.remove("active");
+//   if (i == 2) {
+//     i = 0;
+//     document.getElementsByClassName("main_slide_item")[i].classList.add("active");
+//   } else {
+//     document.getElementsByClassName("main_slide_item")[i + 1].classList.add("active");
+//     i++;
+//   }
+// };
+
+// 개천재들
+let i = 0;
 const slideAction = () => {
-  if (slide1.classList.contains("active")) {
-    slide1.classList.remove("active");
-    slide2.classList.add("active");
-  } else if (slide2.classList.contains("active")) {
-    slide2.classList.remove("active");
-    slide3.classList.add("active");
-  } else if (slide3.classList.contains("active")) {
-    slide3.classList.remove("active");
-    slide1.classList.add("active");
-  }
+  document.getElementsByClassName("main_slide_item")[i].classList.remove("active");
+  i = i == 2 ? 0 : i + 1;
+  document.getElementsByClassName("main_slide_item")[i].classList.add("active");
 };
 
-let interval = setInterval(slideAction, 5000);
+let interval = setInterval(slideAction, 2000);
 
 // 슬라이드 스위치(동작안함)
 // 221206 정지 동작 중
 const slideprev = document.getElementById("mainSlidePrev");
 const slidepause = document.getElementById("mainSlidePause");
 const slidenext = document.getElementById("mainSlideNext");
+
 let isPause = false;
 const mainSlidePauseClick = () => {
-  if (isPause == false) {
-    isPause = true;
-    clearInterval(interval);
-    console.log(isPause);
-  } else if (isPause == true) {
-    interval = setInterval(slideAction, 5000);
-    isPause = false;
-    console.log(isPause);
-  }
+  // if (isPause == false) {
+  //   isPause = true;
+  //   clearInterval(interval);
+  // } else if (isPause == true) {
+  //   interval = setInterval(slideAction, 2000);
+  //   isPause = false;
+  // }
+  isPause ? (interval = setInterval(slideAction, 2000)) : clearInterval(interval);
+  isPause != isPause;
+  // (조건) ? T:F
 };
+
 slidepause.addEventListener("click", mainSlidePauseClick);
 
 /* HEADER */
