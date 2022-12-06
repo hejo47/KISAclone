@@ -129,8 +129,8 @@ header {
   color: #666;
   font-size: 16px;
 }
-.depth1::before {
-  /* box-shadow: inset 0px -3px 0px 0px #003d7c; */
+.depth1 > a::before {
+  box-shadow: inset 0px -3px 0px 0px #003d7c;
   content: "";
   width: 0%;
   height: 3px;
@@ -139,7 +139,9 @@ header {
   left: 0;
   transition: 0.3s ease all;
 }
-
+.header_menu .depth1:hover > a::before {
+  width: 100%;
+}
 /* color: #003d7c;  진한 파랑 */
 
 .depth2 a {
@@ -147,9 +149,7 @@ header {
   font-size: 20px;
   line-height: 20px;
 }
-.header_menu .depth1:hover::before {
-  width: 100%;
-}
+
 .header_tool {
   width: 20%;
   display: flex;
@@ -338,8 +338,8 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 }
 #four_sq {
   position: absolute;
-  top: 255px;
-  right: 163px;
+  top: 253px;
+  right: 165px;
   width: 255px;
   height: 415px;
 }
