@@ -3,7 +3,6 @@ const slide1 = document.getElementsByClassName("main_slide1")[0];
 const slide2 = document.getElementsByClassName("main_slide2")[0];
 const slide3 = document.getElementsByClassName("main_slide3")[0];
 
-// 봉인 중
 const slideAction = () => {
   if (slide1.classList.contains("active")) {
     slide1.classList.remove("active");
@@ -17,12 +16,26 @@ const slideAction = () => {
   }
 };
 
-setInterval(slideAction, 5000);
+let interval = setInterval(slideAction, 5000);
 
 // 슬라이드 스위치(동작안함)
+// 221206 정지 동작 중
 const slideprev = document.getElementById("mainSlidePrev");
 const slidepause = document.getElementById("mainSlidePause");
 const slidenext = document.getElementById("mainSlideNext");
+let isPause = false;
+const mainSlidePauseClick = () => {
+  if (isPause == false) {
+    isPause = true;
+    clearInterval(interval);
+    console.log(isPause);
+  } else if (isPause == true) {
+    interval = setInterval(slideAction, 5000);
+    isPause = false;
+    console.log(isPause);
+  }
+};
+slidepause.addEventListener("click", mainSlidePauseClick);
 
 /* HEADER */
 const header = document.getElementsByTagName("header")[0];
