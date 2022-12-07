@@ -124,6 +124,21 @@ smallPrev.addEventListener("click", smallPrevHandler);
 smallNext.addEventListener("click", smallNextHandler);
 smallPlay.addEventListener("click", smallPlayHandler);
 
+// Section 2 LONG SLIDE
+const longSlidePrev = document.querySelector(".service_btn_wrapper .prev");
+const longSlideNext = document.querySelector(".service_btn_wrapper .next");
+const longSlide = document.querySelector(".service_slider ul");
+
+const longSlidePrevHandler = () => {
+  longSlide.style.transform = "translateX(0)";
+};
+const longSlideNextHandler = () => {
+  longSlide.style.transform = "translateX(-50%)";
+};
+
+longSlidePrev.addEventListener("click", longSlidePrevHandler);
+longSlideNext.addEventListener("click", longSlideNextHandler);
+
 /* HEADER - DEPTH */
 // const depth1 = document.querySelectorAll(".depth1");
 // const depth2_bg = document.querySelectorAll(".depth2_bg");
