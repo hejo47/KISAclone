@@ -41,25 +41,40 @@ let interval = setInterval(slideAction, 2000);
 
 // 슬라이드 스위치(동작안함)
 // 221206 정지 동작 중
+// 221207 다음 동작 중
+// 221207 이전 동작 안 함
 const slideprev = document.getElementById("mainSlidePrev");
 const slidepause = document.getElementById("mainSlidePause");
 const slidenext = document.getElementById("mainSlideNext");
 
+// 메인 슬라이드 이전 버튼
+const mainSlidePrevClick = () => {
+  console.log(i + "?????");
+
+  document.getElementsByClassName("main_slide_item")[i].classList.remove("active");
+  document.getElementsByClassName("main_slide_item")[i - 1].classList.add("active");
+};
+// 메인 슬라이드 다음 버튼
+const mainSlideNextClick = () => {
+  slideAction();
+};
+// 메인 슬라이드 정지 버튼
 let isPause = false;
 const mainSlidePauseClick = () => {
-  if (isPause == false) {
-    isPause = true;
-    clearInterval(interval);
-  } else if (isPause == true) {
+  if (isPause) {
     interval = setInterval(slideAction, 2000);
-    isPause = false;
+  } else {
+    clearInterval(interval);
   }
+  isPause = !isPause;
   // isPause ? (interval = setInterval(slideAction, 2000)) : clearInterval(interval);
   // isPause != isPause;
   // (조건) ? T:F
 };
 
 slidepause.addEventListener("click", mainSlidePauseClick);
+slideprev.addEventListener("click", mainSlidePrevClick);
+slidenext.addEventListener("click", mainSlideNextClick);
 
 /* HEADER */
 const header = document.getElementsByTagName("header")[0];
