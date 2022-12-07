@@ -26,38 +26,8 @@ const headerNonActive = () => {
 };
 header.addEventListener("mouseover", headerActive);
 header.addEventListener("mouseout", headerNonActive);
+
 /* SLIDE */
-// 221206 현재 봉인 중
-// const slide1 = document.getElementsByClassName("main_slide1")[0];
-// const slide2 = document.getElementsByClassName("main_slide2")[0];
-// const slide3 = document.getElementsByClassName("main_slide3")[0];
-
-// const slideAction = () => {
-//   if (slide1.classList.contains("active")) {
-//     slide1.classList.remove("active");
-//     slide2.classList.add("active");
-//   } else if (slide2.classList.contains("active")) {
-//     slide2.classList.remove("active");
-//     slide3.classList.add("active");
-//   } else if (slide3.classList.contains("active")) {
-//     slide3.classList.remove("active");
-//     slide1.classList.add("active");
-//   }
-// };
-
-// let i = 0;
-// const slideAction = () => {
-//   document.getElementsByClassName("main_slide_item")[i].classList.remove("active");
-//   if (i == 2) {
-//     i = 0;
-//     document.getElementsByClassName("main_slide_item")[i].classList.add("active");
-//   } else {
-//     document.getElementsByClassName("main_slide_item")[i + 1].classList.add("active");
-//     i++;
-//   }
-// };
-
-// 개천재들
 let i = 0;
 const slideAction = () => {
   document.getElementsByClassName("main_slide_item")[i].classList.remove("active");
