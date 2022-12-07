@@ -13,7 +13,7 @@ body {
 }
 ul,
 ol,
-li {
+s li {
   list-style: none;
 }
 a {
@@ -475,6 +475,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   display: flex;
   overflow: hidden;
   flex-wrap: wrap;
+  /* position: relative; */
 }
 .second_slide_small p {
   color: #95c11f;
@@ -485,6 +486,14 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 .small_slider {
   width: 100%;
   margin-right: 30px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease all;
+}
+.small_slider.on {
+  opacity: 1;
 }
 .second_slide_small span {
   color: #fff;
@@ -512,7 +521,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   align-items: center;
   column-gap: 7px;
 }
-.btn_wrapper .pause {
+.btn_wrapper .play {
   width: 36px;
   height: 36px;
   border: 1px solid rgba(255, 255, 255, 0.5);

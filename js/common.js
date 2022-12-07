@@ -1,3 +1,31 @@
+// fullpage
+$(function () {
+  $("#fullpage").fullpage({
+    anchors: ["#section1", "#section2", "#section3", "#section4"],
+    slideNavigation: true,
+    navigation: true,
+    navigationPosition: "right",
+    navigationTooltips: ["01 Main", "02 Business", "03 News"],
+    afterLoad: function (anchorLink, index) {
+      if (index == 3) {
+        headerActive();
+      }
+      return index;
+    },
+  });
+});
+/* HEADER */
+const header = document.getElementsByTagName("header")[0];
+const headerActive = () => {
+  header.classList.add("active");
+  document.getElementsByClassName("logoImg")[0].src = "img/logo/logo.png";
+};
+const headerNonActive = () => {
+  header.classList.remove("active");
+  document.getElementsByClassName("logoImg")[0].src = "img/logo/logo_w.png";
+};
+header.addEventListener("mouseover", headerActive);
+header.addEventListener("mouseout", headerNonActive);
 /* SLIDE */
 // 221206 현재 봉인 중
 // const slide1 = document.getElementsByClassName("main_slide1")[0];
@@ -71,17 +99,6 @@ const mainSlidePauseClick = () => {
   // (조건) ? T:F
 };
 
-slidepause.addEventListener("click", mainSlidePauseClick);
-slideprev.addEventListener("click", mainSlidePrevClick);
-slidenext.addEventListener("click", mainSlideNextClick);
-
-// if (document.body.scrollY > 0) {
-//   console.log(1);
-//   headerActive();
-// } else {
-//   headerNonActive();
-// }
-
 //Section 2 마우스가 특정 아티클 부분에 있을 때 배경화면 바뀌기(3개뿐이니까.....)
 const business1 = document.getElementsByClassName("business_1")[0];
 const business2 = document.getElementsByClassName("business_1")[1];
@@ -100,26 +117,42 @@ business1.addEventListener("mouseover", change1);
 business2.addEventListener("mouseover", change2);
 business3.addEventListener("mouseover", change3);
 
-//버튼을 누르면 슬라이드
-const prev = document.querySelector(".btn_wrapper .prev");
-const next = document.querySelector(".btn_wrapper .next");
-const pause = document.querySelector(".btn_wrapper .pause");
+//Section2 Article1 버튼을 누르면 슬라이드
+const smallPrev = document.querySelector(".btn_wrapper .prev");
+const smallNext = document.querySelector(".btn_wrapper .next");
+const smallPlay = document.querySelector(".btn_wrapper .play");
 
-// 자동 슬라이드
+let j = 0;
+const smallSlideAction = () => {
+  document.getElementsByClassName("small_slider")[j].classList.remove("on");
+  j = j == 3 ? 0 : j + 1;
+  document.getElementsByClassName("small_slider")[j].classList.add("on");
+};
 
-//스크롤이 섹션 3에 있을 때 헤더에 액티브 주기
-// new fullpage("#fullpage", {
-//   onLeave: function (origin, destination, direction, trigger) {
-//     var leavingSection = this;
-//     console.log(this);
-//     //after leaving section 2
-//     if (origin.index == 1 && direction == "down") {
-//       alert("Going to section 3!");
-//     } else if (origin.index == 1 && direction == "up") {
-//       alert("Going to section 1!");
-//     }
-//   },
-// });
+let isPlay = false;
+let interval2 = null;
+const smallPlayHandler = () => {
+  isPlay = !isPlay;
+  if (isPlay) {
+    interval2 = setInterval(smallSlideAction, 2000);
+  } else {
+    clearInterval(interval2);
+  }
+};
+
+const smallPrevHandler = () => {
+  document.getElementsByClassName("small_slider")[j].classList.remove("on");
+  j = j == 0 ? 3 : j - 1;
+  document.getElementsByClassName("small_slider")[j].classList.add("on");
+};
+
+const smallNextHandler = () => {
+  smallSlideAction();
+};
+
+smallPrev.addEventListener("click", smallPrevHandler);
+smallNext.addEventListener("click", smallNextHandler);
+smallPlay.addEventListener("click", smallPlayHandler);
 
 /* HEADER - DEPTH */
 // const depth1 = document.querySelectorAll(".depth1");
@@ -161,32 +194,3 @@ $(function () {
   });
   // console.log(1);
 });
-
-// fullpage
-$(function () {
-  $("#fullpage").fullpage({
-    anchors: ["#section1", "#section2", "#section3", "#section4"],
-    slideNavigation: true,
-    navigation: true,
-    navigationPosition: "right",
-    navigationTooltips: ["01 Main", "02 Business", "03 News"],
-    afterLoad: function (anchorLink, index) {
-      if (index == 3) {
-        headerActive();
-      }
-      return index;
-    },
-  });
-});
-/* HEADER */
-const header = document.getElementsByTagName("header")[0];
-const headerActive = () => {
-  header.classList.add("active");
-  document.getElementsByClassName("logoImg")[0].src = "img/logo/logo.png";
-};
-const headerNonActive = () => {
-  header.classList.remove("active");
-  document.getElementsByClassName("logoImg")[0].src = "img/logo/logo_w.png";
-};
-header.addEventListener("mouseover", headerActive);
-header.addEventListener("mouseout", headerNonActive);
