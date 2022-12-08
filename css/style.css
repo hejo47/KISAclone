@@ -679,6 +679,7 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   border-top: 1px solid #ccc;
   border-right: 1px solid #ccc;
   background: #fff;
+  cursor: pointer;
 }
 .notice_menu_list li:first-of-type {
   border-top-left-radius: 20px;
@@ -696,6 +697,12 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   color: #888;
 }
 
+.notice_list {
+  display: none;
+}
+.notice_list.on {
+  display: block;
+}
 .notice_list li {
   display: flex;
   justify-content: space-between;

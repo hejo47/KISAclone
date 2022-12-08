@@ -183,14 +183,26 @@ $(function () {
 
 // section 3 tab
 const notice_menu = document.querySelector(".notice_menu_list li");
-const noticeMenuClickHandler = (event) => {
+const noticeMenuClickHandler = (target) => {
   const notice_menu_active = document.querySelector(".notice_menu_list li.active");
-  const notice_list = document.querySelector(".notice_list");
+  // const notice_list = document.querySelectorAll(".notice_list");
+  const notice_list_on = document.querySelector(".notice_list.on");
   notice_menu_active.classList.remove("active");
-  console.log(event);
-  event.classList.add("active");
-
-  // event.target.classList.add("active");
+  console.log(target.getElementsByTagName("a")[0].getAttribute("href"));
+  const thisID = target.getElementsByTagName("a")[0].getAttribute("href");
+  target.classList.add("active");
+  notice_list_on.classList.remove("on");
+  if (thisID === "#tab_notice") {
+    document.querySelector(".notice_list#tab_notice").classList.add("on");
+  } else if (thisID === "#tab_info") {
+    document.querySelector(".notice_list#tab_info").classList.add("on");
+  } else if (thisID === "#tab_employ") {
+    document.querySelector(".notice_list#tab_employ").classList.add("on");
+  } else if (thisID === "#tab_bid") {
+    document.querySelector(".notice_list#tab_bid").classList.add("on");
+  } else {
+    document.querySelector(".notice_list#tab_all").classList.add("on");
+  }
 };
 
 // section 3 slide1
