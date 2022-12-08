@@ -10,7 +10,6 @@ $(function () {
       if (index == 3) {
         headerActive();
       }
-      return index;
     },
   });
 });
@@ -45,13 +44,11 @@ const slideprev = document.getElementById("mainSlidePrev");
 const slidepause = document.getElementById("mainSlidePause");
 const slidenext = document.getElementById("mainSlideNext");
 
-// 메인 슬라이드 이전 버튼
 const mainSlidePrevClick = () => {
   document.getElementsByClassName("main_slide_item")[i].classList.remove("active");
   i = i == 0 ? 2 : i - 1;
   document.getElementsByClassName("main_slide_item")[i].classList.add("active");
 };
-// 메인 슬라이드 다음 버튼
 const mainSlideNextClick = () => {
   slideAction();
 };
@@ -68,6 +65,10 @@ const mainSlidePauseClick = () => {
   // isPause != isPause;
   // (조건) ? T:F
 };
+
+slideprev.addEventListener("click", mainSlidePrevClick);
+slidepause.addEventListener("click", mainSlidePauseClick);
+slidenext.addEventListener("click", mainSlideNextClick);
 
 //Section 2 마우스가 특정 아티클 부분에 있을 때 배경화면 바뀌기(3개뿐이니까.....)
 const business1 = document.getElementsByClassName("business_1")[0];
