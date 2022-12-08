@@ -179,3 +179,79 @@ $(function () {
   });
   // console.log(1);
 });
+
+// section 3 tab
+// section 3 slide1
+const newsPrevBtn = document.querySelector("#news_prev");
+const newsPauseBtn = document.querySelector("#news_pause");
+const newsNextBtn = document.querySelector("#news_next");
+const newsWrap = document.querySelector(".news");
+
+let a = 1;
+const newsPrevHandler = () => {
+  a--;
+  console.log("prev");
+  console.log(a);
+  newsWrap.style.transform += "translateX(25%)";
+  if (a < 1) {
+    newsWrap.style.transform = "translateX(-50%)";
+    a = 3;
+  }
+};
+const newsNextHandler = () => {
+  console.log(a);
+  newsWrap.style.transform += "translateX(-25%)";
+  a++;
+  if (a > 3) {
+    newsWrap.style.transform = "translateX(0)";
+    a = 1;
+  }
+};
+let isNewsPause = true;
+let interval3 = setInterval(newsNextHandler, 4000);
+const newsPauseHandler = () => {
+  console.log("pause");
+  isNewsPause = !isNewsPause;
+  if (!isNewsPause) {
+    newsPauseBtn.querySelector("i.newsicon").classList.remove("ri-pause-mini-fill");
+    newsPauseBtn.querySelector("i.newsicon").classList.add("ri-play-mini-fill");
+    clearInterval(interval3);
+  } else {
+    newsPauseBtn.querySelector("i.newsicon").classList.add("ri-pause-mini-fill");
+    newsPauseBtn.querySelector("i.newsicon").classList.remove("ri-play-mini-fill");
+    interval3 = setInterval(newsNextHandler, 4000);
+  }
+};
+newsPrevBtn.addEventListener("click", newsPrevHandler);
+newsPauseBtn.addEventListener("click", newsPauseHandler);
+newsNextBtn.addEventListener("click", newsNextHandler);
+
+// section 3 slide2
+const noticePrevBtn = document.querySelector("#notice_prev");
+const noticePauseBtn = document.querySelector("#notice_pause");
+const noticeNextBtn = document.querySelector("#notice_next");
+
+const noticePrevHandler = () => {
+  console.log("prev");
+};
+
+let isNoticePause = true;
+const noticePauseHandler = () => {
+  console.log("pause");
+  isNoticePause = !isNoticePause;
+  if (!isNoticePause) {
+    noticePauseBtn.querySelector("i.noticeicon").classList.remove("ri-pause-mini-fill");
+    noticePauseBtn.querySelector("i.noticeicon").classList.add("ri-play-mini-fill");
+  } else {
+    noticePauseBtn.querySelector("i.noticeicon").classList.add("ri-pause-mini-fill");
+    noticePauseBtn.querySelector("i.noticeicon").classList.remove("ri-play-mini-fill");
+  }
+};
+
+const noticeNextHandler = () => {
+  console.log("next");
+};
+
+noticePrevBtn.addEventListener("click", newsPrevHandler);
+noticePauseBtn.addEventListener("click", noticePauseHandler);
+noticeNextBtn.addEventListener("click", newsNextHandler);
