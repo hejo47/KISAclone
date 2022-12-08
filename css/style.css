@@ -55,8 +55,8 @@ header {
   display: block;
 }
 .logo img {
-  width: 252px;
-  height: 39px;
+  max-width: 252px;
+  max-height: 39px;
 }
 .header_menu {
   width: 60%;
@@ -64,6 +64,7 @@ header {
   flex-direction: row;
   justify-content: center;
 }
+
 .depth1 {
   line-height: 100px;
 }
@@ -74,6 +75,20 @@ header {
   padding: 0 20px;
   margin: 0 9px;
   position: relative;
+}
+@media screen and (max-width: 1600px) {
+  .header_menu .depth1 > a {
+    font-size: 15px;
+    padding: 0 10px;
+    margin: 0 5px;
+  }
+  .header_tool ul li a {
+    font-size: 15px;
+  }
+  .logo img {
+    width: 180px;
+    height: unset;
+  }
 }
 .depth2_bg {
   width: 100vw;
