@@ -181,6 +181,17 @@ $(function () {
 });
 
 // section 3 tab
+const notice_menu = document.querySelector(".notice_menu_list li");
+const noticeMenuClickHandler = (event) => {
+  const notice_menu_active = document.querySelector(".notice_menu_list li.active");
+  const notice_list = document.querySelector(".notice_list");
+  notice_menu_active.classList.remove("active");
+  console.log(event);
+  event.classList.add("active");
+
+  // event.target.classList.add("active");
+};
+
 // section 3 slide1
 const newsPrevBtn = document.querySelector("#news_prev");
 const newsPauseBtn = document.querySelector("#news_pause");
