@@ -266,7 +266,7 @@ const noticePauseHandler = () => {
   if (!isNoticePause) {
     noticePauseBtn.querySelector("i.noticeicon").classList.remove("ri-pause-mini-fill");
     noticePauseBtn.querySelector("i.noticeicon").classList.add("ri-play-mini-fill");
-    clearInterval(interval3);
+    clearInterval(interval4);
   } else {
     noticePauseBtn.querySelector("i.noticeicon").classList.add("ri-pause-mini-fill");
     noticePauseBtn.querySelector("i.noticeicon").classList.remove("ri-play-mini-fill");
