@@ -592,12 +592,6 @@ header.active .header_tool ul li:nth-of-type(2) a i {
 .service_item {
   width: calc(100% / 7);
   margin: 20px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  transition: 0.5s ease all;
-}
-.service_item:hover {
-  background: linear-gradient(to right, #5aa11e, #4f6bd3);
-  border-top-left-radius: 50px;
 }
 .service_slider ul {
   width: 200%;
@@ -617,6 +611,12 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 0.5s ease all;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.service_item a:hover {
+  background: linear-gradient(to right, #5aa11e, #4f6bd3);
+  border-top-left-radius: 50px;
 }
 .service_item a img {
   max-width: 55px;
@@ -743,9 +743,16 @@ header.active .header_tool ul li:nth-of-type(2) a i {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s ease all;
 }
 .tool_box li i {
   font-size: 27px;
+}
+.tool_box li:hover {
+  background-color: #000;
+}
+.tool_box li:hover i {
+  color: #fff;
 }
 .tool_box li.more {
   background: #333;
