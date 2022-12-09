@@ -6,26 +6,48 @@ $(function () {
     navigation: true,
     navigationPosition: "right",
     navigationTooltips: ["01 Main", "02 Business", "03 News"],
+    responsiveWidth: 1600,
     afterLoad: function (anchorLink, index) {
       if (index == 3) {
         headerActive();
       }
     },
+
   });
 });
 /* HEADER */
-const header = document.getElementsByTagName("header")[0];
-const headerActive = () => {
-  header.classList.add("active");
-  document.getElementsByClassName("logoImg")[0].src = "img/logo/logo.png";
-};
-const headerNonActive = () => {
-  header.classList.remove("active");
-  document.getElementsByClassName("logoImg")[0].src = "img/logo/logo_w.png";
-};
-header.addEventListener("mouseover", headerActive);
-header.addEventListener("mouseout", headerNonActive);
 
+
+/* header 모바일 */
+window.onresize = (event) => {
+  const pcHeader = document.querySelector('header.pc');
+  const moHeader = document.querySelector('header.mo');
+  const moHeaderMenu = document.querySelector('header.mo .header_menu');
+  const moHeaderBtn = document.querySelector('header.mo .all_menu');
+  let isView = false;
+  const displayHeader = () => {
+    isView = !isView;
+    console.log(isView);
+    isView ? moHeaderMenu.style.display = "flex" : moHeaderMenu.style.display = "none";
+  }
+  if (screen.width < 1240) {
+    console.log("mo");
+    moHeaderBtn.addEventListener("click", displayHeader);
+  } else {
+    const header = document.querySelector("header.pc");
+    const headerActive = () => {
+      header.classList.add("active");
+      document.getElementsByClassName("logoImg")[0].src = "img/logo/logo.png";
+    };
+    const headerNonActive = () => {
+      header.classList.remove("active");
+      document.getElementsByClassName("logoImg")[0].src = "img/logo/logo_w.png";
+    };
+    header.addEventListener("mouseover", headerActive);
+    header.addEventListener("mouseout", headerNonActive);
+  }
+
+}
 /* SLIDE */
 let i = 0;
 const slideAction = () => {
@@ -289,3 +311,8 @@ const noticePauseHandler = () => {
 noticePrevBtn.addEventListener("click", noticePrevHandler);
 noticePauseBtn.addEventListener("click", noticePauseHandler);
 noticeNextBtn.addEventListener("click", noticeNextHandler);
+
+
+/* 반응형 */
+
+
