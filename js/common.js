@@ -12,24 +12,22 @@ $(function () {
         headerActive();
       }
     },
-
   });
 });
 /* HEADER */
 
-
 /* header 모바일 */
 window.onresize = (event) => {
-  const pcHeader = document.querySelector('header.pc');
-  const moHeader = document.querySelector('header.mo');
-  const moHeaderMenu = document.querySelector('header.mo .header_menu');
-  const moHeaderBtn = document.querySelector('header.mo .all_menu');
+  const pcHeader = document.querySelector("header.pc");
+  const moHeader = document.querySelector("header.mo");
+  const moHeaderMenu = document.querySelector("header.mo .header_menu");
+  const moHeaderBtn = document.querySelector("header.mo .all_menu");
   let isView = false;
   const displayHeader = () => {
     isView = !isView;
     console.log(isView);
-    isView ? moHeaderMenu.style.display = "flex" : moHeaderMenu.style.display = "none";
-  }
+    isView ? (moHeaderMenu.style.display = "flex") : (moHeaderMenu.style.display = "none");
+  };
   if (screen.width < 1240) {
     console.log("mo");
     moHeaderBtn.addEventListener("click", displayHeader);
@@ -46,8 +44,7 @@ window.onresize = (event) => {
     header.addEventListener("mouseover", headerActive);
     header.addEventListener("mouseout", headerNonActive);
   }
-
-}
+};
 /* SLIDE */
 let i = 0;
 const slideAction = () => {
@@ -205,26 +202,15 @@ $(function () {
 
 // section 3 tab
 const notice_menu = document.querySelector(".notice_menu_list li");
-const noticeMenuClickHandler = (target) => {
-  const notice_menu_active = document.querySelector(".notice_menu_list li.active");
-  // const notice_list = document.querySelectorAll(".notice_list");
+const noticeMenuClickHandler = (li) => {
+  const elActivedItem = document.querySelector(".notice_menu_list li.active");
   const notice_list_on = document.querySelector(".notice_list.on");
-  notice_menu_active.classList.remove("active");
-  console.log(target.getElementsByTagName("a")[0].getAttribute("href"));
-  const thisID = target.getElementsByTagName("a")[0].getAttribute("href");
-  target.classList.add("active");
+  elActivedItem.classList.remove("active");
+  const thisID = li.getElementsByTagName("a")[0].getAttribute("href");
+  li.classList.add("active");
   notice_list_on.classList.remove("on");
-  if (thisID === "#tab_notice") {
-    document.querySelector(".notice_list#tab_notice").classList.add("on");
-  } else if (thisID === "#tab_info") {
-    document.querySelector(".notice_list#tab_info").classList.add("on");
-  } else if (thisID === "#tab_employ") {
-    document.querySelector(".notice_list#tab_employ").classList.add("on");
-  } else if (thisID === "#tab_bid") {
-    document.querySelector(".notice_list#tab_bid").classList.add("on");
-  } else {
-    document.querySelector(".notice_list#tab_all").classList.add("on");
-  }
+
+  document.querySelector(`.notice_list${thisID}`).classList.add("on");
 };
 
 // section 3 slide1
@@ -312,7 +298,4 @@ noticePrevBtn.addEventListener("click", noticePrevHandler);
 noticePauseBtn.addEventListener("click", noticePauseHandler);
 noticeNextBtn.addEventListener("click", noticeNextHandler);
 
-
 /* 반응형 */
-
-
