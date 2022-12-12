@@ -15,20 +15,21 @@ window.onresize = (event) => {
     console.log("mo");
     moHeaderBtn.addEventListener("click", displayHeader);
   } else {
-    const header = document.querySelector("header.pc");
-    const headerActive = () => {
-      header.classList.add("active");
-      document.getElementsByClassName("logoImg")[0].src = "img/logo/logo.png";
-    };
-    const headerNonActive = () => {
-      header.classList.remove("active");
-      document.getElementsByClassName("logoImg")[0].src = "img/logo/logo_w.png";
-    };
-    header.addEventListener("mouseover", headerActive);
-    header.addEventListener("mouseout", headerNonActive);
+    
   }
 
 }
+const header = document.querySelector("header.pc");
+    const headerActive = () => {
+      header.classList.add("active");
+      document.getElementsByClassName("logoImg")[0].src = "./img/logo/logo.png";
+    };
+    const headerNonActive = () => {
+      header.classList.remove("active");
+      document.getElementsByClassName("logoImg")[0].src = "./img/logo/logo_w.png";
+    };
+    header.addEventListener("mouseover", headerActive);
+    header.addEventListener("mouseout", headerNonActive);
 
 // fullpage
 $(function () {

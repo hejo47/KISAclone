@@ -1233,8 +1233,13 @@ footer {
   .second_slide_small.cyber ul li a {
     width: 80%;
   }
-  .second_slide_small.cyber ul li a img {
-    width: 100%;
+  .second_slide_small ul li a img {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+  .second_slide_small2 ul li a img {
+    width: calc(100% - 40px);
+    padding: 0 20px;
   }
   .second_slide_small2 {
     width: 45%;
@@ -1285,6 +1290,9 @@ padding-bottom: 20px;
 .third_title {
   padding-top: 0;
 }
+.photo_news {
+  margin-left: 30px;
+}
 }
 
 @media screen and (max-width: 991px) {
@@ -1306,6 +1314,8 @@ padding-bottom: 20px;
 .photo_news {
   width: calc(100%);
   margin-top: 30px;
+  margin-left: 0;
+
 }
 .news_con {
   overflow: visible;
@@ -1319,16 +1329,34 @@ padding-bottom: 20px;
   flex-direction: column;
 }
 .society_tab {
+  width: 100%;
   margin-bottom: 30px;
 }
 
 }
 
 @media screen and (max-width: 768px) {
-
+  .logo img {
+    width: 140px;
 }
+  .second_slide_small2.service {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.second_slide_small1 li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .second_slide_small {
+    width: 100%;
 
-@media screen and (max-width: 768px) {
+  }
+  .second_slide_small2 {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .slide_text .slide_p {
     font-size: 16px;
     color: #fff;
@@ -1345,8 +1373,74 @@ width: 300%;
 .slidebar {
   display: none;
 }
-.society_wrap {
-width: 250%;
+.second_text {
+  width: 80%;
+}
+}
 
+@media screen and (max-width: 500px) {
+  .slide_text .slide_p {
+    font-size: 14px;
+}
+  .main_slide_p {
+    font-size: 25px;
+  }
+  .logo img {
+    width: 110px;
+}
+.header_tool ul li a {
+  font-size: 13px;
+}
+  .service_slider ul {
+    width: 600%;
+}
+  .notice_top {
+    width: calc(100% - 40px);
+  }
+  .notice_menu_list li a {
+    font-size: 12px;
+  }
+  .notice_menu_list li {
+    padding: 5px 5px;
+  }
+  .photo_news {
+    width: 100%;
+  }
+  .notice_photo {
+    width: 100%
+  }
+  .notice_wrap img {
+    width: 100%;
+    height: unset;
+  }
+  .notice_list li a {
+    font-size: 15px;
+  }
+  .notice_list li div {
+    font-size: 12px;
+  }
+  .footer_intro .container {
+    flex-direction: column;
+  }
+  .footer_intro .left {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer_intro .left > li {
+    border-right: none;
+    padding: 0;
+}
+.footer_intro .right {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer_intro .right > ul {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer_intro .right > ul li a {
+  padding: 0px;
 }
 }
