@@ -187,6 +187,21 @@ longSlideNext.addEventListener("click", longSlideNextHandler);
 //   console.log(1);
 // });
 
+
+// section 3 tab
+const notice_menu = document.querySelector(".notice_menu_list li");
+const noticeMenuClickHandler = (li) => {
+  const notice_menu_active = document.querySelector(".notice_menu_list li.active");
+  // const notice_list = document.querySelectorAll(".notice_list");
+  const notice_list_on = document.querySelector(".notice_list.on");
+  notice_menu_active.classList.remove("active");
+  console.log(li.getElementsByTagName("a")[0].getAttribute("href"));
+  const thisID = li.getElementsByTagName("a")[0].getAttribute("href");
+  console.log(thisID);
+  li.classList.add("active");
+  notice_list_on.classList.remove("on");
+  document.querySelector(`.notice_list${thisID}`).classList.add("on");
+};
 // HEADER1
 $(function () {
   $(".depth1").each(function () {
@@ -207,22 +222,7 @@ $(function () {
 
 const mainHeader = document.querySelector("header.active");
 
-mainHeader.addEventListener("mouseenter");
-
-// section 3 tab
-const notice_menu = document.querySelector(".notice_menu_list li");
-const noticeMenuClickHandler = (target) => {
-  const notice_menu_active = document.querySelector(".notice_menu_list li.active");
-  // const notice_list = document.querySelectorAll(".notice_list");
-  const notice_list_on = document.querySelector(".notice_list.on");
-  notice_menu_active.classList.remove("active");
-  console.log(target.getElementsByTagName("a")[0].getAttribute("href"));
-  const thisID = target.getElementsByTagName("a")[0].getAttribute("href");
-  target.classList.add("active");
-  notice_list_on.classList.remove("on");
-
-  document.querySelector(`.notice_list$(thisID)`).classList.add("on");
-};
+// mainHeader.addEventListener("mouseenter");
 
 // section 3 slide1
 const newsPrevBtn = document.querySelector("#news_prev");

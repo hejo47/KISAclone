@@ -110,7 +110,7 @@ header.pc .header_menu {
 .depth2_bg.active {
   opacity: 1;
   transition: 0.4s ease all;
-  height: 450%;
+  height: 400%;
   visibility: visible;
   z-index: 9999;
 }
@@ -997,19 +997,21 @@ footer {
   align-items: center;
   border-radius: 50%;
 }
-.footer_intro .right .sns li a:hover {
+/* .footer_intro .right .sns li a:hover {
+  width: 100%;
+  height: 100%;
   background: #888;
-}
+} */
 .footer_intro .right .sns li a i {
   font-size: 30px;
   color: #444;
 }
-.footer_intro .right .sns li:last-of-type a i {
+/* .footer_intro .right .sns li:last-of-type a i {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.footer_intro .right .sns li:not(:first-of-type) {
+} */
+.footer_intro .right .sns li {
   width: 48px;
   height: 48px;
   border-radius: 50%;
