@@ -89,27 +89,24 @@ header.pc .header_menu {
 
 .depth2_bg {
   width: 100vw;
-  height: 0;
   background: rgb(244, 248, 250);
   position: absolute;
   top: 100px;
   left: 0;
   opacity: 0;
   transition: 0.4s ease all;
+  display: none;
 }
 /* DROPDOWN MENU */
 .depth2_bg.active {
   display: flex;
   opacity: 1;
-  height: max-content;
   transition: 0.4s ease all;
 }
 .depth2_wrapper {
-  width: 1210px;
+  max-width: 1210px;
   margin: 0 auto;
   display: flex;
-  transition: 0.2s ease all;
-
 }
 .depth2_wrapper h2 {
   width: 170px;
