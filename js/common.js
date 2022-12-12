@@ -185,7 +185,7 @@ longSlideNext.addEventListener("click", longSlideNextHandler);
 // });
 
 // HEADER1
- $(function () {
+$(function () {
   $(".depth1").each(function () {
     let tg = $(this);
     // console.log(tg);
@@ -200,7 +200,11 @@ longSlideNext.addEventListener("click", longSlideNextHandler);
     });
   });
   // console.log(1);
-}); 
+});
+
+const mainHeader = document.querySelector("header.active");
+
+mainHeader.addEventListener("mouseenter");
 
 // section 3 tab
 const notice_menu = document.querySelector(".notice_menu_list li");
