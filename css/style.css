@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* RESET */
+html {
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,11 +12,11 @@
   word-break: keep-all;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 ul,
 ol,
-s li {
+li {
   list-style: none;
 }
 a {
@@ -26,7 +29,6 @@ a {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
 }
 /* HEADER */
 header.pc {
