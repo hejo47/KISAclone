@@ -217,17 +217,8 @@ const noticeMenuClickHandler = (target) => {
   const thisID = target.getElementsByTagName("a")[0].getAttribute("href");
   target.classList.add("active");
   notice_list_on.classList.remove("on");
-  if (thisID === "#tab_notice") {
-    document.querySelector(".notice_list#tab_notice").classList.add("on");
-  } else if (thisID === "#tab_info") {
-    document.querySelector(".notice_list#tab_info").classList.add("on");
-  } else if (thisID === "#tab_employ") {
-    document.querySelector(".notice_list#tab_employ").classList.add("on");
-  } else if (thisID === "#tab_bid") {
-    document.querySelector(".notice_list#tab_bid").classList.add("on");
-  } else {
-    document.querySelector(".notice_list#tab_all").classList.add("on");
-  }
+  
+  document.querySelector(`.notice_list$(thisID)`).classList.add("on");
 };
 
 // section 3 slide1
