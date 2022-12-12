@@ -41,6 +41,7 @@ header.pc {
   z-index: 99;
   transition: 0.5s all ease;
 }
+
 .header_wrapper {
   width: 100%;
   display: flex;
@@ -71,6 +72,8 @@ header.pc .header_menu {
   justify-content: center;
 }
 
+
+
 .depth1 {
   line-height: 100px;
 }
@@ -83,18 +86,30 @@ header.pc .header_menu {
   position: relative;
 }
 
+
 .depth2_bg {
   width: 100vw;
+  height: 0;
   background: rgb(244, 248, 250);
   position: absolute;
   top: 100px;
   left: 0;
-  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease all;
+}
+/* DROPDOWN MENU */
+.depth2_bg.active {
+  display: flex;
+  opacity: 1;
+  height: max-content;
+  transition: 0.4s ease all;
 }
 .depth2_wrapper {
   width: 1210px;
   margin: 0 auto;
   display: flex;
+  transition: 0.2s ease all;
+
 }
 .depth2_wrapper h2 {
   width: 170px;
@@ -229,11 +244,7 @@ header.pc.active .header_tool ul li:nth-of-type(2) a i {
   color: #666;
 }
 
-/* DROPDOWN MENU */
-.active {
-  visibility: visible;
-  display: flex;
-}
+
 
 /* FIRST PAGE */
 .main_slide_wrapper {

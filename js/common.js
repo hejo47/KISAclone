@@ -185,12 +185,13 @@ longSlideNext.addEventListener("click", longSlideNextHandler);
 // });
 
 // HEADER1
-$(function () {
+ $(function () {
   $(".depth1").each(function () {
     let tg = $(this);
     // console.log(tg);
     tg.mouseover(function () {
       tg.find(".depth2_bg").addClass("active");
+      // $(this).find(".depth2_bg").stop().slideUp();
       // console.log(tg.find(".depth2_bg"));
     });
     tg.mouseout(function () {
@@ -199,7 +200,7 @@ $(function () {
     });
   });
   // console.log(1);
-});
+}); 
 
 // section 3 tab
 const notice_menu = document.querySelector(".notice_menu_list li");
