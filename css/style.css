@@ -42,15 +42,16 @@ header.pc {
   transition: 0.5s all ease;
 }
 header.pc.active {
-  height: 450px;
+  /* height: 450px;
   position: absolute;
-  min-height: max-content;
+  min-height: max-content; */
 }
 .header_wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s all ease;
 }
 header.mo {
   display: none;
@@ -90,7 +91,7 @@ header.pc .header_menu {
 
 .depth2_bg {
   width: 100%;
-  height: 100%;
+  height: 500%;
   background: rgb(244, 248, 250);
   position: absolute;
   top: 100px;
@@ -109,6 +110,7 @@ header.pc .header_menu {
   max-width: 1210px;
   margin: 0 auto;
   display: flex;
+  transition: 0.4s ease all;
 }
 .depth2_wrapper h2 {
   width: 170px;
