@@ -1,22 +1,3 @@
-// fullpage
-$(function () {
-  $("#fullpage").fullpage({
-    anchors: ["#section1", "#section2", "#section3", "#section4"],
-    slideNavigation: true,
-    navigation: true,
-    navigationPosition: "right",
-    navigationTooltips: ["01 Main", "02 Business", "03 News"],
-    responsiveWidth: 1600,
-    afterLoad: function (anchorLink, index) {
-      if (index == 3) {
-        headerActive();
-      }
-    },
-
-  });
-});
-/* HEADER */
-
 
 /* header 모바일 */
 window.onresize = (event) => {
@@ -48,6 +29,27 @@ window.onresize = (event) => {
   }
 
 }
+
+// fullpage
+$(function () {
+  $("#fullpage").fullpage({
+    anchors: ["#section1", "#section2", "#section3", "#section4"],
+    slideNavigation: true,
+    navigation: true,
+    navigationPosition: "right",
+    navigationTooltips: ["01 Main", "02 Business", "03 News"],
+    responsiveWidth: 1600,
+    // afterLoad: function (anchorLink, index) {
+    //   if (index == 3) {
+    //     headerActive();
+    //   }
+    // },
+
+  });
+});
+/* HEADER */
+
+
 /* SLIDE */
 let i = 0;
 const slideAction = () => {
