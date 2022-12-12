@@ -76,7 +76,6 @@ header.pc .header_menu {
   flex-direction: row;
   justify-content: center;
 }
-
 .depth1 {
   line-height: 100px;
 }
@@ -91,20 +90,21 @@ header.pc .header_menu {
 
 .depth2_bg {
   width: 100%;
-  height: 500%;
+  height: 0;
   background: rgb(244, 248, 250);
   position: absolute;
   top: 100px;
   left: 0;
   opacity: 0;
+  visibility: hidden;
   transition: 0.4s ease all;
-  display: none;
 }
 /* DROPDOWN MENU */
 .depth2_bg.active {
-  display: flex;
   opacity: 1;
   transition: 0.4s ease all;
+  height: 500%;
+  visibility: visible;
 }
 .depth2_wrapper {
   max-width: 1210px;
