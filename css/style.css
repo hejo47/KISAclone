@@ -103,7 +103,7 @@ header.pc .header_menu {
 .depth2_bg.active {
   opacity: 1;
   transition: 0.4s ease all;
-  height: 500%;
+  height: 450%;
   visibility: visible;
 }
 .depth2_wrapper {
