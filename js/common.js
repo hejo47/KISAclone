@@ -1,35 +1,32 @@
-
 /* header 모바일 */
 window.onresize = (event) => {
-  const pcHeader = document.querySelector('header.pc');
-  const moHeader = document.querySelector('header.mo');
-  const moHeaderMenu = document.querySelector('header.mo .header_menu');
-  const moHeaderBtn = document.querySelector('header.mo .all_menu');
+  const pcHeader = document.querySelector("header.pc");
+  const moHeader = document.querySelector("header.mo");
+  const moHeaderMenu = document.querySelector("header.mo .header_menu");
+  const moHeaderBtn = document.querySelector("header.mo .all_menu");
   let isView = false;
   const displayHeader = () => {
     isView = !isView;
     console.log(isView);
-    isView ? moHeaderMenu.style.display = "flex" : moHeaderMenu.style.display = "none";
-  }
+    isView ? (moHeaderMenu.style.display = "flex") : (moHeaderMenu.style.display = "none");
+  };
   if (screen.width < 1240) {
     console.log("mo");
     moHeaderBtn.addEventListener("click", displayHeader);
   } else {
-    
   }
-
-}
+};
 const header = document.querySelector("header.pc");
-    const headerActive = () => {
-      header.classList.add("active");
-      document.getElementsByClassName("logoImg")[0].src = "./img/logo/logo.png";
-    };
-    const headerNonActive = () => {
-      header.classList.remove("active");
-      document.getElementsByClassName("logoImg")[0].src = "./img/logo/logo_w.png";
-    };
-    header.addEventListener("mouseover", headerActive);
-    header.addEventListener("mouseout", headerNonActive);
+const headerActive = () => {
+  header.classList.add("active");
+  document.getElementsByClassName("logoImg")[0].src = "./img/logo/logo.png";
+};
+const headerNonActive = () => {
+  header.classList.remove("active");
+  document.getElementsByClassName("logoImg")[0].src = "./img/logo/logo_w.png";
+};
+header.addEventListener("mouseover", headerActive);
+header.addEventListener("mouseout", headerNonActive);
 
 // fullpage
 $(function () {
@@ -45,11 +42,9 @@ $(function () {
     //     headerActive();
     //   }
     // },
-
   });
 });
 /* HEADER */
-
 
 /* SLIDE */
 let i = 0;
@@ -189,7 +184,7 @@ longSlideNext.addEventListener("click", longSlideNextHandler);
 //   console.log(1);
 // });
 
-// HEADER
+// HEADER1
 $(function () {
   $(".depth1").each(function () {
     let tg = $(this);
@@ -217,7 +212,7 @@ const noticeMenuClickHandler = (target) => {
   const thisID = target.getElementsByTagName("a")[0].getAttribute("href");
   target.classList.add("active");
   notice_list_on.classList.remove("on");
-  
+
   document.querySelector(`.notice_list$(thisID)`).classList.add("on");
 };
 
@@ -306,7 +301,4 @@ noticePrevBtn.addEventListener("click", noticePrevHandler);
 noticePauseBtn.addEventListener("click", noticePauseHandler);
 noticeNextBtn.addEventListener("click", noticeNextHandler);
 
-
 /* 반응형 */
-
-
