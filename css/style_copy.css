@@ -1095,6 +1095,10 @@ footer {
   border: 1px solid #fff;
   margin-right: 5px;
 }
+.trans_site select option {
+  background-color: #fff;
+  color: #282828;
+}
 .trans_site_wrap button {
   background-color: transparent;
   border: 1px solid #fff;
