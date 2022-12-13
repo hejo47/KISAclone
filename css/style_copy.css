@@ -862,7 +862,7 @@ header.mo .header_tool ul li a i {
   /* flex-wrap: wrap; */
   justify-content: center;
   align-items: flex-start;
-  margin-top: 50px;
+  margin-top: 30px;
   column-gap: 40px;
 }
 .society_wrap {
