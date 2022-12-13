@@ -1040,6 +1040,43 @@ footer {
   color: #fff;
   padding-right: 15px;
 }
+.footer_bottom {
+  width: 100%;
+  padding: 30px 20px 60px;
+  background-color: #282828;
+}
+.footer_bottom .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer_bottom span,
+.footer_bottom a {
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.25em;
+}
+.footer_bottom span {
+  margin: 5px;
+}
+.footer_bottom .left {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.address,
+.number {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.copy {
+  width: 100%;
+}
+.footer_bottom .right {
+  width: 40%;
+  display: flex;
+}
 
 @media screen and (max-width: 1600px) {
   /* header */
