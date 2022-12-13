@@ -1077,7 +1077,27 @@ footer {
   width: 40%;
   display: flex;
 }
-
+.trans_site_wrap {
+  display: flex;
+  flex-direction: row;
+}
+.trans_site {
+  width: 184px;
+  height: 38px;
+  border: 1px solid #fff;
+  padding: 0px 20px 0px 10px;
+}
+.trans_site ul {
+  width: 184px;
+  border: 1px solid #575757;
+  background-color: #fff;
+  transform: translate(-10px, -100%);
+  padding: 0px 20px 0px 10px;
+}
+.trans_site ul li:hover {
+  background-color: #4f6bd3;
+  color: #fff;
+}
 @media screen and (max-width: 1600px) {
   /* header */
   .header_menu .depth1 > a {
