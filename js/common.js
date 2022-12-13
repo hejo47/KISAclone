@@ -30,21 +30,21 @@ header.addEventListener("mouseout", headerNonActive);
 
 // fullpage
 $(function () {
-	$("#fullpage").fullpage({
-		anchors: ["#section1", "#section2", "#section3", "#section4"],
-		slideNavigation: true,
-		navigation: true,
-		navigationPosition: "right",
-		navigationTooltips: ["01 Main", "02 Business", "03 News"],
-		responsiveWidth: 1600,
-		onLeave: function (anchorLink, index) {
-			if (index > 2) {
-				headerActive();
-			} else {
-				headerNonActive();
-			}
-		},
-	});
+  $("#fullpage").fullpage({
+    anchors: ["#section1", "#section2", "#section3", "#section4"],
+    slideNavigation: true,
+    navigation: true,
+    navigationPosition: "right",
+    navigationTooltips: ["01 Main", "02 Business", "03 News"],
+    responsiveWidth: 1600,
+    onLeave: function (anchorLink, index) {
+      if (index > 2) {
+        headerActive();
+      } else {
+        headerNonActive();
+      }
+    },
+  });
 });
 
 /* HEADER */
@@ -187,7 +187,6 @@ longSlideNext.addEventListener("click", longSlideNextHandler);
 //   console.log(1);
 // });
 
-
 // section 3 tab
 const notice_menu = document.querySelector(".notice_menu_list li");
 const noticeMenuClickHandler = (li) => {
@@ -203,25 +202,43 @@ const noticeMenuClickHandler = (li) => {
   document.querySelector(`.notice_list${thisID}`).classList.add("on");
 };
 // HEADER1
-$(function () {
-  $(".depth1").each(function () {
-    let tg = $(this);
-    // console.log(tg);
-    tg.mouseover(function () {
-      tg.find(".depth2_bg").addClass("active");
-      // $(this).find(".depth2_bg").stop().slideUp();
-      // console.log(tg.find(".depth2_bg"));
-    });
-    tg.mouseout(function () {
-      // $(this).find(".depth2_bg").stop().slideUp();
-      tg.find(".depth2_bg").removeClass("active");
-    });
-  });
-  // console.log(1);
-});
+// $(function () {
+//   $(".depth1").each(function () {
+//     let tg = $(this);
+//     // console.log(tg);
+//     tg.mouseover(function () {
+//       tg.find(".depth2_bg").addClass("active");
+//       // $(this).find(".depth2_bg").stop().slideUp();
+//       // console.log(tg.find(".depth2_bg"));
+//     });
+//     tg.mouseout(function () {
+//       // $(this).find(".depth2_bg").stop().slideUp();
+//       tg.find(".depth2_bg").removeClass("active");
+//     });
+//   });
+//   // console.log(1);
+// });
 
-const mainHeader = document.querySelector("header.active");
+let mainHeader = document.querySelector("header.pc");
+let openMainHeader = document.querySelector("header.pc.open");
+const mainHeaderEnterHandler = (depth1) => {
+  mainHeader.classList.add("open");
+  depth1.classList.add("on");
+  // mainHeader.style.height = "";
+};
+const mainHeaderLeaveHandler = (depth1) => {
+  // mainHeader.classList.remove("open");
+  // console.log(depth1);
+  mainHeader.classList.remove("open");
+  depth1.classList.remove("on");
 
+  // depth1.target.classList.remove("on");
+};
+// const openDepth1 = (depth1) => {
+//   depth1.addEventListener("mouseenter", mainHeaderEnterHandler);
+//   depth1.addEventListener("mouseleave", mainHeaderLeaveHandler);
+// };
+// mainHeaderDepth1.addEventListener("mouseenter", mainHeaderEnterHandler);
 // mainHeader.addEventListener("mouseenter");
 
 // section 3 slide1
