@@ -224,6 +224,10 @@ let openMainHeader = document.querySelector("header.pc.open");
 const mainHeaderEnterHandler = (depth1) => {
   mainHeader.classList.add("open");
   depth1.classList.add("on");
+  // const wrapper = depth1.querySelector('.depth2_wrapper');
+  // wrapper.animate({
+  //   paddingTop: [0 + "px" , 100 + "px"];
+  // });
   // mainHeader.style.height = "";
 };
 const mainHeaderLeaveHandler = (depth1) => {
