@@ -225,6 +225,7 @@ const mainHeaderEnterHandler = (depth1) => {
   let headerInner = depth1.querySelector(".depth2_wrapper .inner");
   mainHeader.classList.add("open");
   depth1.classList.add("on");
+  document.querySelector(".overlay").style.display = "block";
   mainHeader.style.height = headerInner.style.height;
   mainHeader.style.overflow = "hidden";
 };
@@ -233,6 +234,7 @@ const mainHeaderLeaveHandler = (depth1) => {
   mainHeader.classList.remove("open");
   depth1.classList.remove("on");
   mainHeader.style.overflow = "unset";
+  document.querySelector(".overlay").style.display = "none";
 
   // depth1.target.classList.remove("on");
 };
