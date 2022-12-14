@@ -130,6 +130,8 @@ header.pc .depth2_wrapper {
 }
 header.pc.open .depth1.on .depth2_wrapper {
   height: auto;
+  transition: 0.5s ease all;
+
   /* min-height: 400px; */
   /* transition: 0.5s ease all; */
 }
@@ -1042,7 +1044,7 @@ footer {
   padding-right: 15px;
 }
 .footer_bottom {
-  width: 100%;
+  width: calc(100% - 40px);
   padding: 30px 20px 60px;
   background-color: #282828;
 }
