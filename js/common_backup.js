@@ -222,17 +222,19 @@ const noticeMenuClickHandler = (li) => {
 let mainHeader = document.querySelector("header.pc");
 let openMainHeader = document.querySelector("header.pc.open");
 const mainHeaderEnterHandler = (depth1) => {
-  let headerInner = depth1.querySelector(".depth2_wrapper .inner");
   mainHeader.classList.add("open");
   depth1.classList.add("on");
-  mainHeader.style.height = headerInner.style.height;
-  mainHeader.style.overflow = "hidden";
+  // const wrapper = depth1.querySelector('.depth2_wrapper');
+  // wrapper.animate({
+  //   paddingTop: [0 + "px" , 100 + "px"];
+  // });
+  // mainHeader.style.height = "";
 };
 const mainHeaderLeaveHandler = (depth1) => {
-  mainHeader.style.height = "100px";
+  // mainHeader.classList.remove("open");
+  // console.log(depth1);
   mainHeader.classList.remove("open");
   depth1.classList.remove("on");
-  mainHeader.style.overflow = "unset";
 
   // depth1.target.classList.remove("on");
 };
