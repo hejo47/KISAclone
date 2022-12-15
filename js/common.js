@@ -29,7 +29,7 @@ header.addEventListener("mouseout", headerNonActive);
 // fullpage
 $(function () {
   $("#fullpage").fullpage({
-    anchors: ["#section1", "#section2", "#section3", "#section4"],
+    anchors: ["section1", "section2", "section3", "section4"],
     slideNavigation: true,
     navigation: true,
     navigationPosition: "right",

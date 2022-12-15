@@ -955,6 +955,10 @@ header.mo .header_tool ul li a i {
 .notice_list li a {
   color: #666;
 }
+.notice_list li a h4 {
+  color: #666;
+  font-weight: normal;
+}
 .notice_list li div {
   display: flex;
   align-items: center;
@@ -1261,6 +1265,10 @@ footer {
 .copy {
   width: 100%;
   padding-top: 30px;
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.25em;
+  font-weight: normal;
 }
 .footer_bottom .right {
   width: 40%;
