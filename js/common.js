@@ -164,28 +164,6 @@ longSlidePrev.addEventListener("click", longSlidePrevHandler);
 longSlideNext.addEventListener("click", longSlideNextHandler);
 
 /* HEADER - DEPTH */
-// const depth1 = document.querySelectorAll(".depth1");
-// const depth2_bg = document.querySelectorAll(".depth2_bg");
-// console.log(depth1);
-// const menuDropDown = () => {
-//   depth2_bg.classList.add("active");
-// };
-// const menuUp = () => {
-//   depth2_bg.classList.remove("active");
-// };
-// depth1.addEventListener("mouseover", menuDropDown);
-// depth1.addEventListener("mouseout", menuUp);
-// $(function () {
-//   $(".depth1")
-//     .mouseover(function () {
-//       $(this).find(".depth2_bg").stop().show();
-//       console.log($(this).find(".depth2_bg"));
-//     })
-//     .mouseout(function () {
-
-//     });
-//   console.log(1);
-// });
 
 // section 3 tab
 const notice_menu = document.querySelector(".notice_menu_list li");
@@ -223,27 +201,27 @@ let mainHeader = document.querySelector("header.pc");
 let openMainHeader = document.querySelector("header.pc.open");
 const mainHeaderEnterHandler = (depth1) => {
   let headerInner = depth1.querySelector(".depth2_wrapper .inner");
+  스;
+
+  // 헤더 오픈클래스
   mainHeader.classList.add("open");
   depth1.classList.add("on");
+  // 오버레이
   document.querySelector(".overlay").style.display = "block";
+  // 헤더 크기를 이너 크기로 바꿔주기
   mainHeader.style.height = headerInner.style.height;
   mainHeader.style.overflow = "hidden";
 };
 const mainHeaderLeaveHandler = (depth1) => {
+  // 헤더 크기 100으로 초기화
   mainHeader.style.height = "100px";
+  mainHeader.style.overflow = "unset";
+  // 헤더 클래스 삭제
   mainHeader.classList.remove("open");
   depth1.classList.remove("on");
-  mainHeader.style.overflow = "unset";
+  // 오버레이
   document.querySelector(".overlay").style.display = "none";
-
-  // depth1.target.classList.remove("on");
 };
-// const openDepth1 = (depth1) => {
-//   depth1.addEventListener("mouseenter", mainHeaderEnterHandler);
-//   depth1.addEventListener("mouseleave", mainHeaderLeaveHandler);
-// };
-// mainHeaderDepth1.addEventListener("mouseenter", mainHeaderEnterHandler);
-// mainHeader.addEventListener("mouseenter");
 
 // section 3 slide1
 const newsPrevBtn = document.querySelector("#news_prev");
