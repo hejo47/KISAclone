@@ -487,6 +487,24 @@ header.mo .header_tool ul li a i {
 .main_slide_p .slide_green {
   color: #95c11f;
 }
+@keyframes keyCursor {
+  0% {
+    border-right: 1px solid #FFF;
+  }
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
+.kisa {
+  border-right: 1px solid #FFF;
+  margin-right: 8px;
+  letter-spacing: -0.02em;
+  animation-name: keyCursor;
+  animation-duration: 0.4s;
+  line-height: 1;
+  animation-iteration-count: infinite;
+  box-sizing: content-box;
+}
 /* SLIDEBAR */
 .slidebar {
   width: 100%;
