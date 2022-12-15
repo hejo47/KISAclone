@@ -7,11 +7,9 @@ window.onresize = (event) => {
   let isView = false;
   const displayHeader = () => {
     isView = !isView;
-    console.log(isView);
     isView ? (moHeaderMenu.style.display = "flex") : (moHeaderMenu.style.display = "none");
   };
   if (screen.width < 1240) {
-    console.log("mo");
     moHeaderBtn.addEventListener("click", displayHeader);
   } else {
   }
@@ -198,9 +196,7 @@ const noticeMenuClickHandler = (li) => {
   // const notice_list = document.querySelectorAll(".notice_list");
   const notice_list_on = document.querySelector(".notice_list.on");
   notice_menu_active.classList.remove("active");
-  console.log(li.getElementsByTagName("a")[0].getAttribute("href"));
   const thisID = li.getElementsByTagName("a")[0].getAttribute("href");
-  console.log(thisID);
   li.classList.add("active");
   notice_list_on.classList.remove("on");
   document.querySelector(`.notice_list${thisID}`).classList.add("on");
@@ -233,7 +229,6 @@ const mainHeaderEnterHandler = (depth1) => {
   document.querySelector(".overlay").style.display = "block";
   mainHeader.style.height = headerInner.style.height;
 
-  console.log(mainHeader.style.height);
   mainHeader.style.overflow = "hidden";
 };
 const mainHeaderLeaveHandler = (depth1) => {
