@@ -123,6 +123,7 @@ header.pc.active .header_tool ul li:nth-of-type(2) a i {
 }
 header.pc.open {
   transition: 0.5s ease all;
+  padding-bottom: 100px;
 }
 header.pc .depth2_wrapper {
   width: 100%;
@@ -136,13 +137,12 @@ header.pc .depth2_wrapper {
   background-color: #fff;
   background-image: url(../img/main/gnb_bg.png), url(../img/main/logo_bg.png);
   background-repeat: no-repeat, no-repeat;
-  background-position: left top 1px, right bottom 101px;
+  background-position: left top 1px, right bottom 1px;
   box-shadow: inset 0px 15px 15px rgb(210 210 210);
 }
 header.pc.open .depth1.on .depth2_wrapper {
   height: auto;
   transition: 0.5s ease all;
-
   /* min-height: 400px; */
   /* transition: 0.5s ease all; */
 }
