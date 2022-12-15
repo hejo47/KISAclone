@@ -860,9 +860,25 @@ header.mo .header_tool ul li a i {
   background-image: url(../img/main/bg_dot.jpg);
   background-repeat: repeat;
 }
+.section.third::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/main/section3_bg1.png), url(../img/main/section3_bg2.png);
+  background-position: left 10% top, right top;
+  background-size: contain, contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+  display: block;
+}
 .section.third .container {
   flex-wrap: wrap;
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
 }
 .third_title {
   width: 100%;
@@ -883,6 +899,10 @@ header.mo .header_tool ul li a i {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  z-index: 2;
+}
+.notice_top::before {
+  
 }
 .notice {
   width: 50%;

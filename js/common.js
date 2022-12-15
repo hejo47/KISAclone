@@ -166,28 +166,6 @@ longSlidePrev.addEventListener("click", longSlidePrevHandler);
 longSlideNext.addEventListener("click", longSlideNextHandler);
 
 /* HEADER - DEPTH */
-// const depth1 = document.querySelectorAll(".depth1");
-// const depth2_bg = document.querySelectorAll(".depth2_bg");
-// console.log(depth1);
-// const menuDropDown = () => {
-//   depth2_bg.classList.add("active");
-// };
-// const menuUp = () => {
-//   depth2_bg.classList.remove("active");
-// };
-// depth1.addEventListener("mouseover", menuDropDown);
-// depth1.addEventListener("mouseout", menuUp);
-// $(function () {
-//   $(".depth1")
-//     .mouseover(function () {
-//       $(this).find(".depth2_bg").stop().show();
-//       console.log($(this).find(".depth2_bg"));
-//     })
-//     .mouseout(function () {
-
-//     });
-//   console.log(1);
-// });
 
 // section 3 tab
 const notice_menu = document.querySelector(".notice_menu_list li");
@@ -228,7 +206,6 @@ const mainHeaderEnterHandler = (depth1) => {
   depth1.classList.add("on");
   document.querySelector(".overlay").style.display = "block";
   mainHeader.style.height = headerInner.style.height;
-
   mainHeader.style.overflow = "hidden";
 };
 const mainHeaderLeaveHandler = (depth1) => {
@@ -237,15 +214,7 @@ const mainHeaderLeaveHandler = (depth1) => {
   depth1.classList.remove("on");
   mainHeader.style.overflow = "unset";
   document.querySelector(".overlay").style.display = "none";
-
-  // depth1.target.classList.remove("on");
 };
-// const openDepth1 = (depth1) => {
-//   depth1.addEventListener("mouseenter", mainHeaderEnterHandler);
-//   depth1.addEventListener("mouseleave", mainHeaderLeaveHandler);
-// };
-// mainHeaderDepth1.addEventListener("mouseenter", mainHeaderEnterHandler);
-// mainHeader.addEventListener("mouseenter");
 
 // section 3 slide1
 const newsPrevBtn = document.querySelector("#news_prev");
