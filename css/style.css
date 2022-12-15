@@ -139,6 +139,47 @@ a {
   color: #FFF;
   font-size: 26px;
 }
+/* SCROLL ANIMATION */
+.scroll_line_ani {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  display: flex;
+  column-gap: 15px;
+}
+.scroll_line_ani span {
+  writing-mode: vertical-rl;
+  color: #FFF;
+}
+.scroll_line_ani .line {
+  height: 250px;
+  width: 1px;
+  background-color: #FFF;
+  position: relative;
+}
+@keyframes circleScroll {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.scroll_line_ani .circle {
+  background-color: #FFF;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: 78%;
+  animation-duration: 5s;
+  animation-name: circleScroll;
+  animation-iteration-count: infinite;
+}
+
 /* HEADER */
 header.pc {
   width: 100%;
@@ -870,7 +911,7 @@ header.mo .header_tool ul li a i {
 .notice_list li {
   display: flex;
   justify-content: space-between;
-  padding: 15px 0 15px 15px;
+  padding: 10px 0 10px 15px;
   border-bottom: 1px solid #ccc;
 }
 .notice_list li a {
