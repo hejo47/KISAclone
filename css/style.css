@@ -37,6 +37,70 @@ a {
 #fp-nav {
   z-index: 40 !important;
 }
+#fp-nav.right {
+  right: 0 !important;
+}
+#fp-nav ul li {
+  display: flex !important;
+  /* justify-content: center; */
+  align-items: center;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #FFF !important;
+}
+#fp-nav ul li a span.importantBlack {
+  background: #000 !important;
+};
+#fp-nav ul li a, .fp-slidesNav ul li a {
+  height: 0px !important;
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+  height: 2px !important;
+  width: 50px !important;
+  margin: 0px 0 0 0px !important;
+  border-radius: 0 !important;
+}
+#fp-nav ul li, .fp-slidesNav ul li {
+  width: 30px !important;
+  height: 20px !important;
+  margin: 10px 0px !important;
+}
+#fp-nav ul li:last-of-type {
+  display: none !important;
+}
+#fp-nav ul li a.active+.fp-tooltip {
+  font-size: 20px !important;
+  top: -4px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  /* 글씨 */
+} 
+#fp-nav ul li a+.fp-tooltip {
+  right: 30px !important;
+}
+#fp-nav ul li .fp-tooltip {
+  opacity: 1 !important;
+  width: unset !important;
+  top: 0px !important;
+}
+#fp-nav ul li a.active+.fp-tooltip.right {
+  right: 65px !important;
+}
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+  /* 호버 효과 */
+  
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  /* 선택 안 한 네비 */
+  height: 2px !important;
+  width: 20px !important;
+  border-radius: 50% !important;
+  left: unset !important;
+  right: 0 !important;
+}
+#fp-nav ul li a span{
+}
 .container {
   width: 100%;
   max-width: 1340px;
