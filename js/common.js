@@ -30,7 +30,7 @@ header.addEventListener("mouseout", headerNonActive);
 $(function () {
   $("#fullpage").fullpage({
     menu: '.header.pc',
-    anchors: ["section1", "section2", "section3", "section4"],
+    anchors: ["main", "business", "News", "footer"],
     slideNavigation: true,
     navigation: true,
     navigationPosition: "right",
@@ -39,8 +39,6 @@ $(function () {
     keyboardScrolling: true,
     animateAnchor: true,
     recordHistory: true,
-    // fixedElements: ".header.pc",
-    scrollOverflow: true,
     onLeave: function (anchorLink, index) {
       if (index > 2) {
         headerActive();
