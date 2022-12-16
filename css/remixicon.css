@@ -20,8 +20,8 @@
 [class*=" ri-"] {
   font-family: "remixicon" !important;
   font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
 }
 
 .ri-lg {

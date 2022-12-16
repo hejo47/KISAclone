@@ -45,22 +45,28 @@ a {
   /* justify-content: center; */
   align-items: center;
 }
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
-  background: #FFF !important;
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #fff !important;
 }
 #fp-nav ul li a span.importantBlack {
   background: #000 !important;
-};
-#fp-nav ul li a, .fp-slidesNav ul li a {
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
   height: 0px !important;
 }
-#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
   height: 2px !important;
   width: 50px !important;
   margin: 0px 0 0 0px !important;
   border-radius: 0 !important;
 }
-#fp-nav ul li, .fp-slidesNav ul li {
+#fp-nav ul li,
+.fp-slidesNav ul li {
   width: 30px !important;
   height: 20px !important;
   margin: 10px 0px !important;
@@ -68,15 +74,15 @@ a {
 #fp-nav ul li:last-of-type {
   display: none !important;
 }
-#fp-nav ul li a.active+.fp-tooltip {
+#fp-nav ul li a.active + .fp-tooltip {
   font-size: 20px !important;
   top: -4px !important;
   display: flex !important;
   justify-content: center;
   align-items: center;
   /* 글씨 */
-} 
-#fp-nav ul li a+.fp-tooltip {
+}
+#fp-nav ul li a + .fp-tooltip {
   right: 30px !important;
 }
 #fp-nav ul li .fp-tooltip {
@@ -84,14 +90,15 @@ a {
   width: unset !important;
   top: 0px !important;
 }
-#fp-nav ul li a.active+.fp-tooltip.right {
+#fp-nav ul li a.active + .fp-tooltip.right {
   right: 65px !important;
 }
-#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
   /* 호버 효과 */
-  
 }
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
   /* 선택 안 한 네비 */
   height: 2px !important;
   width: 20px !important;
@@ -108,7 +115,7 @@ a {
 }
 /* TOOL BAR */
 .toolbar_con {
-  background-color: #FFF;
+  background-color: #fff;
   position: fixed;
   top: 60%;
   right: 0;
@@ -123,20 +130,20 @@ a {
   padding: 25px 15px;
 }
 .search_tool {
-  background-color:#0087f1;
+  background-color: #0087f1;
 }
 .top_tool {
-  background-color:#394147;
+  background-color: #394147;
   padding: 20px 15px;
 }
 .search_tool p,
 .top_tool p {
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
 }
 .search_tool i,
 .top_tool i {
-  color: #FFF;
+  color: #fff;
   font-size: 26px;
 }
 /* SCROLL ANIMATION */
@@ -149,12 +156,12 @@ a {
 }
 .scroll_line_ani span {
   writing-mode: vertical-rl;
-  color: #FFF;
+  color: #fff;
 }
 .scroll_line_ani .line {
   height: 250px;
   width: 1px;
-  background-color: #FFF;
+  background-color: #fff;
   position: relative;
 }
 @keyframes circleScroll {
@@ -169,7 +176,7 @@ a {
   }
 }
 .scroll_line_ani .circle {
-  background-color: #FFF;
+  background-color: #fff;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -489,14 +496,14 @@ header.mo .header_tool ul li a i {
 }
 @keyframes keyCursor {
   0% {
-    border-right: 1px solid #FFF;
+    border-right: 1px solid #fff;
   }
   100% {
     border-right: 1px solid transparent;
   }
 }
 .kisa {
-  border-right: 1px solid #FFF;
+  border-right: 1px solid #fff;
   margin-right: 8px;
   letter-spacing: -0.02em;
   animation-name: keyCursor;
@@ -902,7 +909,6 @@ header.mo .header_tool ul li a i {
   z-index: 2;
 }
 .notice_top::before {
-  
 }
 .notice {
   width: 50%;
