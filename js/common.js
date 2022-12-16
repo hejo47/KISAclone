@@ -38,12 +38,12 @@ $(function () {
     onLeave: function (anchorLink, index) {
       if (index > 2) {
         headerActive();
-        $("#fp-nav ul li .fp-tooltip").css('color', '#000');
-        $('#fp-nav ul li a span').addClass('importantBlack');
+        $("#fp-nav ul li .fp-tooltip").css("color", "#000");
+        $("#fp-nav ul li a span").addClass("importantBlack");
       } else {
         headerNonActive();
-        $("#fp-nav ul li .fp-tooltip").css('color', '#FFF');
-        $('#fp-nav ul li a span').removeClass('importantBlack');
+        $("#fp-nav ul li .fp-tooltip").css("color", "#FFF");
+        $("#fp-nav ul li a span").removeClass("importantBlack");
       }
     },
   });

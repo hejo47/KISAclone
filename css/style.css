@@ -1031,7 +1031,7 @@ header.mo .header_tool ul li a i {
   transition: 0.5s ease all;
 }
 .news_wrap {
-  width: calc(50% - 20px);
+  width: calc(25% - 20px);
   margin: 0 10px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -1048,10 +1048,11 @@ header.mo .header_tool ul li a i {
 .news_wrap p {
   font-size: 18px;
   margin: 20px 15px;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  height: 25px;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 90%;
 }
 
 .notice_bottom {
