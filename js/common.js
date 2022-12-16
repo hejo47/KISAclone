@@ -29,12 +29,18 @@ header.addEventListener("mouseout", headerNonActive);
 // fullpage
 $(function () {
   $("#fullpage").fullpage({
+    menu: '.header.pc',
     anchors: ["section1", "section2", "section3", "section4"],
     slideNavigation: true,
     navigation: true,
     navigationPosition: "right",
     navigationTooltips: ["01 Main", "02 Business", "03 News"],
     responsiveWidth: 1600,
+    keyboardScrolling: true,
+    animateAnchor: true,
+    recordHistory: true,
+    // fixedElements: ".header.pc",
+    scrollOverflow: true,
     onLeave: function (anchorLink, index) {
       if (index > 2) {
         headerActive();

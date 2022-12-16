@@ -36,7 +36,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> -->
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
@@ -45,27 +45,23 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <div class="toolbar_con">
-      <a href="#" class="search_tool">
-        <i class="ri-search-line"></i>
-        <p class="search_tool_p">통합검색</p>
-      </a>
-      <a href="#section1" class="top_tool">
-        <i class="ri-arrow-up-line"></i>
-        <p class="top_tool_p">TOP</p>
-      </a>
-    </div>
-    <header class="pc" style="height: 100px">
+    <dl class="skip_menu">
+      <dt>바로가기 메뉴</dt>
+      <dd><a href="#section1" tabindex="1">메인화면 바로가기</a></dd>
+      <dd><a href="#section2" tabindex="2">주요성과 바로가기</a></dd>
+      <dd><a href="#section3" tabindex="3">알림마당 바로가기</a></dd>
+    </dl>
+    <header class="pc" style="height: 100px;">
       <div class="bg"></div>
       <div class="header_wrapper">
         <div class="logo">
-          <a href="#"><img src="img/logo/logo_w.png" alt="logo" class="logoImg"></a>
+          <a href="#section3"><img src="img/logo/logo_w.png" alt="logo" class="logoImg"></a>
         </div>
         <ul class="header_menu">
           <li class="depth1" onmouseenter="mainHeaderEnterHandler(this)" onmouseleave="mainHeaderLeaveHandler(this)">
             <a href="#">고객서비스</a>
             <div class="depth2_wrapper">
-              <div class="inner" style="height: 343px">
+              <div class="inner" style="height: 343px;">
                 <h2>고객서비스</h2>
                 <ul class="depth2 first">
                   <li><a href="#">주요서비스</a></li>
@@ -112,7 +108,7 @@
           <li class="depth1" onmouseenter="mainHeaderEnterHandler(this)" onmouseleave="mainHeaderLeaveHandler(this)">
             <a href="#">사업소개</a>
             <div class="depth2_wrapper">
-              <div class="inner" style="height: 440px">
+              <div class="inner" style="height: 440px;">
                 <h2>사업소개</h2>
                 <ul class="depth2 third">
                   <li>
@@ -248,7 +244,7 @@
         </div>
       </div>
     </header>
-    <header class="mo">
+    <!-- <header class="mo">
       <div class="bg"></div>
       <div class="header_wrapper">
         <div class="logo">
@@ -423,7 +419,7 @@
           </ul>
         </div>
       </div>
-    </header>
+    </header> -->
     <div class="overlay"></div>
     <div id="fullpage" class="section-container">
       <section class="section first">
