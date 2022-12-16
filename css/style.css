@@ -27,12 +27,64 @@ a {
   text-decoration: none;
 }
 /* COMMON */
-.skip_menu {
+/* .skip_menu {
   position: fixed;
   width: 100%;
-  background-color: #394147;
   color: #FFF;
   z-index: -999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skip_menu dt {
+  position: absolute;
+  text-indent: -9999px;
+  left: -9999px;
+  opacity: 0;
+  background-color: #394147;
+}
+.skip_menu dd {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+}
+.skip_menu dd a:focus, 
+.skip_menu dd a.active {
+  z-index: 9999;
+}
+.skip_menu dt, a {
+  color: #FFF;
+} */
+.skip_menu {
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  column-gap: 30px;
+}
+.skip_menu dt {
+  z-index: -9999;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.skip_menu a {
+  line-height: 30px;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  background: #333;
+  display: block;
+  z-index: 10000;
+  color: #FFF;
+  text-align: center;
+  padding: 30px 0;
+}
+.skip_menu a:focus,
+.skip_menu a:active {
+  top: 0;
 }
 .overlay {
   background-color: rgba(0, 0, 0, 0.4);
