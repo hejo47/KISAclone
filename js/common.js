@@ -38,10 +38,15 @@ $(function () {
     navigationTooltips: ["01 Main", "02 Business", "03 News"],
     responsiveWidth: 1600,
     keyboardScrolling: true,
-    animateAnchor: true,
+    animateAnchor: false,
     css3: true,
-    onLeave: function (index) {
-      if (index > 2) {
+    afterLoad: function (origin, dest, dir) {
+      console.log(dir);
+      if (origin.index >= 1 && dir == "down") {
+        headerActive();
+        $(".fp-tooltip").css("color", "#000");
+        $("#fp-nav ul li a span").addClass("importantBlack");
+      } else if (origin.index == 3 && dir == "up") {
         headerActive();
         $(".fp-tooltip").css("color", "#000");
         $("#fp-nav ul li a span").addClass("importantBlack");
