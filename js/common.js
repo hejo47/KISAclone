@@ -53,7 +53,13 @@ $(function () {
   });
 });
 
-/* HEADER */
+/* Mo HEADER */
+const headerMo = document.querySelector("header.mo");
+const allMenu = document.querySelector(".all_menu");
+const viewHeaderMo = () => {
+  console.log("open");
+}
+allMenu.addEventListener("click", viewHeaderMo);
 
 /* SLIDE */
 let i = 0;
