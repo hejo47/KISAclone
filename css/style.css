@@ -96,15 +96,17 @@ a {
   z-index: 50;
   display: none;
 }
+#fp-nav ul li a.active, .fp-slidesNav ul li a.active {
+}
 #fp-nav {
   z-index: 40 !important;
+  right: 0;
 }
 #fp-nav.right {
   right: 0 !important;
 }
 #fp-nav ul li {
   display: flex !important;
-  /* justify-content: center; */
   align-items: center;
 }
 #fp-nav ul li a span,
@@ -139,10 +141,10 @@ a {
 #fp-nav ul li a.active + .fp-tooltip {
   font-size: 20px !important;
   top: -4px !important;
+  left: -170px;
   display: flex !important;
   justify-content: center;
   align-items: center;
-  /* 글씨 */
 }
 #fp-nav ul li a + .fp-tooltip {
   right: 30px !important;
@@ -155,18 +157,21 @@ a {
 #fp-nav ul li a.active + .fp-tooltip.right {
   right: 65px !important;
 }
-#fp-nav ul li:hover a span,
-.fp-slidesNav ul li:hover a span {
-  /* 호버 효과 */
-}
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-  /* 선택 안 한 네비 */
   height: 2px !important;
   width: 20px !important;
   border-radius: 50% !important;
   left: unset !important;
   right: 0 !important;
+}
+#fp-nav ul, .fp-slidesNav ul {
+  position: absolute;
+  right: 0px;
+} 
+.fp-sr-only {
+  color: #FFF;
+  display: none;
 }
 .container {
   width: 100%;

@@ -31,6 +31,7 @@ $(function () {
   $("#fullpage").fullpage({
     menu: '.header.pc',
     anchors: ["main", "business", "news", "footer"],
+    sectionSelector: ".section",
     slideNavigation: true,
     navigation: true,
     navigationPosition: "right",
@@ -38,15 +39,15 @@ $(function () {
     responsiveWidth: 1600,
     keyboardScrolling: true,
     animateAnchor: true,
-    recordHistory: true,
-    onLeave: function (anchorLink, index) {
+    css3: true,
+    onLeave: function (index) {
       if (index > 2) {
         headerActive();
-        $("#fp-nav ul li .fp-tooltip").css("color", "#000");
+        $(".fp-tooltip").css("color", "#000");
         $("#fp-nav ul li a span").addClass("importantBlack");
       } else {
         headerNonActive();
-        $("#fp-nav ul li .fp-tooltip").css("color", "#FFF");
+        $(".fp-tooltip").css("color", "#FFF");
         $("#fp-nav ul li a span").removeClass("importantBlack");
       }
     },
