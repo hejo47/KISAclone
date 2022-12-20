@@ -1,3 +1,8 @@
+// layer popup
+document.querySelector('#layer button').addEventListener('click', () => {
+  document.querySelector('#layer').style.display = "none";
+})
+
 /* header 모바일 */
 window.onresize = (event) => {
   const pcHeader = document.querySelector("header.pc");
