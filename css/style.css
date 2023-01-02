@@ -25,7 +25,7 @@ html {
   right: 0;
   top: 0;
   background-color: #222;
-  color: #FFF;
+  color: #fff;
 }
 * {
   margin: 0;
@@ -70,7 +70,7 @@ a {
   background: #333;
   display: block;
   z-index: 10000;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   padding: 30px 0;
 }
@@ -88,7 +88,8 @@ a {
   z-index: 50;
   display: none;
 }
-#fp-nav ul li a.active, .fp-slidesNav ul li a.active {
+#fp-nav ul li a.active,
+.fp-slidesNav ul li a.active {
 }
 #fp-nav {
   z-index: 40 !important;
@@ -157,12 +158,13 @@ a {
   left: unset !important;
   right: 0 !important;
 }
-#fp-nav ul, .fp-slidesNav ul {
+#fp-nav ul,
+.fp-slidesNav ul {
   position: absolute;
   right: 0px;
-} 
+}
 .fp-sr-only {
-  color: #FFF;
+  color: #fff;
   display: none;
 }
 .container {
@@ -1021,12 +1023,13 @@ header.mo .header_tool ul li a i {
 }
 .notice_list li a {
   color: #666;
+  width: 85%;
 }
 .notice_list li a h4 {
   color: #666;
   font-weight: normal;
   overflow: hidden;
-  width: 85%;
+  width: 100%;
   height: 25px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1034,8 +1037,10 @@ header.mo .header_tool ul li a i {
 }
 .notice_list li div {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   color: #666;
+  width: 15%;
 }
 
 .photo_news {
@@ -1363,16 +1368,19 @@ footer {
   color: #bbb;
   border: 1px solid #fff;
   margin-right: 5px;
+  cursor: pointer;
 }
 .trans_site select option {
   background-color: #fff;
   color: #282828;
+  cursor: pointer;
 }
 .trans_site_wrap button {
   background-color: transparent;
   border: 1px solid #fff;
   color: #bbb;
   padding: 5px 10px;
+  cursor: pointer;
 }
 .footer_icon_wrapper a {
   display: inline-block;
@@ -1457,10 +1465,10 @@ footer {
   }
   .society_tab {
     width: 100%;
-}
-.photo_news {
-  margin-left: 30px;
-}
+  }
+  .photo_news {
+    margin-left: 30px;
+  }
 }
 
 @media screen and (max-width: 1240px) {
@@ -1770,7 +1778,8 @@ footer {
     display: flex;
     flex-direction: row;
   }
-  .address, .number {
+  .address,
+  .number {
     width: 100%;
   }
   .trans_site_wrap {
@@ -1880,5 +1889,4 @@ footer {
   .notice_list li a h4 {
     width: 100%;
   }
-  
 }
