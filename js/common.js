@@ -1,7 +1,7 @@
 // layer popup
-document.querySelector('#layer button').addEventListener('click', () => {
-  document.querySelector('#layer').style.display = "none";
-})
+document.querySelector("#layer button").addEventListener("click", () => {
+  document.querySelector("#layer").style.display = "none";
+});
 
 /* header 모바일 */
 window.onresize = (event) => {
@@ -34,7 +34,7 @@ header.addEventListener("mouseout", headerNonActive);
 // fullpage
 $(function () {
   $("#fullpage").fullpage({
-    menu: '.header.pc',
+    menu: ".header.pc",
     anchors: ["main", "business", "news", "footer"],
     sectionSelector: ".section",
     slideNavigation: true,
@@ -64,7 +64,7 @@ const headerMo = document.querySelector("header.mo");
 const allMenu = document.querySelector(".all_menu");
 const viewHeaderMo = () => {
   console.log("open");
-}
+};
 allMenu.addEventListener("click", viewHeaderMo);
 
 /* SLIDE */
@@ -316,5 +316,17 @@ const noticePauseHandler = () => {
 noticePrevBtn.addEventListener("click", noticePrevHandler);
 noticePauseBtn.addEventListener("click", noticePauseHandler);
 noticeNextBtn.addEventListener("click", noticeNextHandler);
+
+/* 상단 검색버튼 */
+const searchBtn = document.querySelector(".search_icon");
+const search = document.querySelector(".search_bar");
+let isOn = true;
+
+const searchBtnClickHandler = () => {
+  isOn ? search.classList.add("on") : search.classList.remove("on");
+  isOn = !isOn;
+};
+
+searchBtn.addEventListener("click", searchBtnClickHandler);
 
 /* 반응형 */

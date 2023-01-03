@@ -7,15 +7,17 @@ html {
 #layer {
   position: fixed;
   width: 500px;
-  height: 500px;
-  background-color: #ccc;
+  height: 350px;
+  background-color: #fff;
+  border: 10px solid #003d7c;
+  border-radius: 20px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
   z-index: 99999;
   font-size: 1.4em;
   padding: 3em;
   box-sizing: border-box;
   line-height: 2;
-  top: 50px;
+  top: 150px;
   left: 150px;
 }
 #layer button {
@@ -24,8 +26,9 @@ html {
   padding: 10px 20px;
   right: 0;
   top: 0;
-  background-color: #222;
+  background-color: #003d7c;
   color: #fff;
+  border: none;
 }
 * {
   margin: 0;
@@ -327,6 +330,36 @@ header.pc.active .header_tool ul li:nth-of-type(2) a,
 header.pc.active .header_tool ul li:nth-of-type(2) a i {
   color: #666;
 }
+.search_icon {
+  position: relative;
+}
+.search_bar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 50px;
+}
+.search_bar.on {
+  display: flex;
+}
+.search_bar input {
+  padding: 0 20px;
+  width: calc(500px - 80px);
+  height: 80px;
+  font-size: 18px;
+  counter-reset: #333;
+}
+.search_bar button {
+  width: 80px;
+  height: 82px;
+  background-color: #1c5db1;
+  border: none;
+}
+.search_bar button i {
+  color: #fff;
+  font-size: 30px;
+}
+
 header.pc.open {
   transition: 0.5s ease all;
   padding-bottom: 100px;
@@ -516,6 +549,7 @@ header.mo .header_tool ul li a i {
   height: 100%;
   display: block;
   object-fit: cover;
+  transition: 5s ease all;
 }
 
 .main_slide_wrapper .main_slide_item {
@@ -523,6 +557,9 @@ header.mo .header_tool ul li a i {
 }
 .main_slide_wrapper .main_slide_item.active {
   opacity: 1;
+}
+.main_slide_wrapper .main_slide_item.active img {
+  transform: scale(1.2);
 }
 
 .main_slide1 {
