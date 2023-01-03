@@ -17,14 +17,14 @@ window.onresize = (event) => {
 const header = document.querySelector("header.pc");
 const headerActive = () => {
   header.classList.add("active");
-  document.getElementsByClassName("logoImg")[0].src = "../img/logo/logo.png";
+  document.getElementsByClassName("logoImg")[0].src = "/img/logo/logo.png";
 };
 const headerNonActive = () => {
   header.classList.remove("active");
-  document.getElementsByClassName("logoImg")[0].src = "../img/logo/logo_w.png";
+  document.getElementsByClassName("logoImg")[0].src = "/img/logo/logo_w.png";
 };
 header.addEventListener("mouseover", headerActive);
-header.addEventListener("mouseout", headerNonActive);
+// header.addEventListener("mouseout", headerNonActive);
 
 /* Mo HEADER */
 const headerMo = document.querySelector("header.mo");
