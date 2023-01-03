@@ -45,6 +45,7 @@ $(function () {
     keyboardScrolling: true,
     animateAnchor: false,
     css3: true,
+    sectionsColor: ["#FFF", "#000"],
     afterLoad: function (origin, dest, dir) {
       if (dest.index > 1) {
         headerActive();
