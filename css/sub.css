@@ -105,6 +105,7 @@ header.pc {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 .content_icon {
   width: 145px;
@@ -140,3 +141,67 @@ header.pc {
   margin: 0 3px;
 }
 /* board list */
+.table_wrapper {
+  width: 100%;
+}
+.table_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+.table_top .total span {
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+}
+.table_top .total span:nth-of-type(2) {
+  border-right: none;
+}
+.table_top .table_search select {
+  padding: 0 20px 0 10px;
+  height: 38px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  margin-right: 5px;
+}
+.table_top .table_search input {
+  padding: 0 20px 0 10px;
+  height: 38px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  margin-right: 5px;
+}
+.table_top .table_search button {
+  height: 38px;
+  color: #fff;
+  background-color: #333;
+  padding: 0 10px 0 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.table_top .table_search button i {
+  color: #fff;
+}
+/* table */
+table {
+  border-collapse: collapse;
+  border-top: 2px solid;
+}
+thead tr th {
+  padding: 23px 5px;
+  background-color: #eeeff1;
+  border-bottom: 1px solid #ddd;
+}
+tbody tr td {
+  padding: 18px 5px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 300;
+}
+tbody tr td:not(.notice_title) {
+  text-align: center;
+}
+tbody tr td a {
+}
