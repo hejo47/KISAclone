@@ -26,13 +26,13 @@ const headerNonActive = () => {
 header.addEventListener("mouseover", headerActive);
 // header.addEventListener("mouseout", headerNonActive);
 
-/* Mo HEADER */
-const headerMo = document.querySelector("header.mo");
-const allMenu = document.querySelector(".all_menu");
-const viewHeaderMo = () => {
-  console.log("open");
+/* Mobile HEADER */
+const mobileHeaderVieweBtn = document.querySelector("#all_menu");
+const clickMobileHeaderBtnHandler = () => {
+  console.log(mobileHeaderVieweBtn);
 };
-allMenu.addEventListener("click", viewHeaderMo);
+
+mobileHeaderVieweBtn.addEventListener("click", clickMobileHeaderBtnHandler);
 
 /* HEADER - DEPTH */
 let mainHeader = document.querySelector("header.pc");
