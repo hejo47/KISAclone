@@ -34,7 +34,6 @@ const clickMobileHeaderBtnHandler = () => {
 };
 const clickMobileHeaderCloseBtnHandler = () => {
   document.querySelector("header.mo .header_menu").style.display = "none";
-  console.log(123);
 };
 mobileHeaderVieweBtn.addEventListener("click", clickMobileHeaderBtnHandler);
 mobileHeaderCloseBtn.addEventListener("click", clickMobileHeaderCloseBtnHandler);
