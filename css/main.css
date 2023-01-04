@@ -55,9 +55,6 @@
 .skip_menu a:active {
   top: 0;
 }
-#fp-nav ul li a.active,
-.fp-slidesNav ul li a.active {
-}
 #fp-nav {
   z-index: 40 !important;
   right: 0;
@@ -547,12 +544,6 @@
   justify-content: center;
   align-items: center;
 }
-.service_btn_wrapper .prev {
-  /* margin-left: 10px; */
-}
-.service_btn_wrapper .next {
-  /* margin-right: 10px; */
-}
 .service_btn_wrapper .prev i,
 .service_btn_wrapper .next i {
   font-size: 36px;
@@ -656,8 +647,6 @@
   justify-content: flex-start;
   align-items: center;
   z-index: 2;
-}
-.notice_top::before {
 }
 .notice {
   width: 50%;

@@ -220,9 +220,6 @@ header.pc .depth1 .depth2_wrapper {
   display: flex;
   transition: 0.5s ease all;
 }
-header.pc.open .depth1.on .inner {
-  /* transition: 0.5s ease all; */
-}
 .depth2_wrapper h2 {
   width: 170px;
   color: #003d7c;
@@ -278,9 +275,6 @@ header.pc.open .depth1.on .inner {
   bottom: 1.5px;
   left: 0;
   transition: 0.3s ease all;
-}
-.depth1.on .depth2_wrapper {
-  /* display: flex; */
 }
 .header_menu .depth1:hover > a::before {
   width: 100%;
@@ -393,9 +387,6 @@ footer {
   color: #888;
   font-size: 18px;
   padding: 0 5px;
-}
-.footer_intro .right > ul li:last-of-type a {
-  /* padding-right: 20px; */
 }
 .footer_intro .right .sns {
   display: flex;
@@ -527,8 +518,6 @@ footer {
   justify-content: center;
   align-items: center;
   column-gap: 5px;
-}
-.paging ul li {
 }
 .paging ul li a {
   width: 38px;
