@@ -26,13 +26,18 @@ const headerNonActive = () => {
 header.addEventListener("mouseover", headerActive);
 // header.addEventListener("mouseout", headerNonActive);
 
-/* Mo HEADER */
-const headerMo = document.querySelector("header.mo");
-const allMenu = document.querySelector(".all_menu");
-const viewHeaderMo = () => {
-  console.log("open");
+/* Mobile HEADER */
+const mobileHeaderVieweBtn = document.querySelector("#all_menu");
+const mobileHeaderCloseBtn = document.querySelector("#close");
+const clickMobileHeaderBtnHandler = () => {
+  document.querySelector("header.mo .header_menu").style.display = "flex";
 };
-allMenu.addEventListener("click", viewHeaderMo);
+const clickMobileHeaderCloseBtnHandler = () => {
+  document.querySelector("header.mo .header_menu").style.display = "none";
+  console.log(123);
+};
+mobileHeaderVieweBtn.addEventListener("click", clickMobileHeaderBtnHandler);
+mobileHeaderCloseBtn.addEventListener("click", clickMobileHeaderCloseBtnHandler);
 
 /* HEADER - DEPTH */
 let mainHeader = document.querySelector("header.pc");

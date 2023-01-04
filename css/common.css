@@ -614,6 +614,48 @@ footer {
   .header_tool ul {
     margin-right: 20px;
   }
+  header.mo .all_menu {
+    padding: 0;
+  }
+  .header_tool .mo_lang,
+  .header_tool .mo_search {
+    display: none;
+  }
+  /* mobile header */
+  header.mo .header_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    z-index: 999999;
+  }
+  header.mo .depth1 {
+    line-height: 10vh;
+  }
+  header.mo .depth2_wrapper {
+    display: none;
+  }
+  header.mo .depth2 > li {
+    border-left: none;
+    border-right: none;
+  }
+  #close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  #close i {
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+  }
   /* footer */
   .footer_intro {
     padding-left: 20px;

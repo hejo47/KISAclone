@@ -28,11 +28,16 @@ header.addEventListener("mouseover", headerActive);
 
 /* Mobile HEADER */
 const mobileHeaderVieweBtn = document.querySelector("#all_menu");
+const mobileHeaderCloseBtn = document.querySelector("#close");
 const clickMobileHeaderBtnHandler = () => {
-  console.log(mobileHeaderVieweBtn);
+  document.querySelector("header.mo .header_menu").style.display = "flex";
 };
-
+const clickMobileHeaderCloseBtnHandler = () => {
+  document.querySelector("header.mo .header_menu").style.display = "none";
+  console.log(123);
+};
 mobileHeaderVieweBtn.addEventListener("click", clickMobileHeaderBtnHandler);
+mobileHeaderCloseBtn.addEventListener("click", clickMobileHeaderCloseBtnHandler);
 
 /* HEADER - DEPTH */
 let mainHeader = document.querySelector("header.pc");
