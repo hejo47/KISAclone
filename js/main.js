@@ -14,9 +14,6 @@ const slideAction = () => {
 let interval = setInterval(slideAction, 5000);
 
 // 슬라이드 스위치
-// 221206 정지 동작 중
-// 221207 다음 동작 중
-// 221207 이전 동작 중
 const slideprev = document.getElementById("mainSlidePrev");
 const slidepause = document.getElementById("mainSlidePause");
 const slidenext = document.getElementById("mainSlideNext");
@@ -48,7 +45,7 @@ slideprev.addEventListener("click", mainSlidePrevClick);
 slidepause.addEventListener("click", mainSlidePauseClick);
 slidenext.addEventListener("click", mainSlideNextClick);
 
-//Section 2 마우스가 특정 아티클 부분에 있을 때 배경화면 바뀌기(3개뿐이니까.....)
+//Section 2 마우스가 특정 아티클 부분에 있을 때 배경화면 바뀌기
 const business1 = document.getElementsByClassName("business_1")[0];
 const business2 = document.getElementsByClassName("business_1")[1];
 const business3 = document.getElementsByClassName("business_1")[2];

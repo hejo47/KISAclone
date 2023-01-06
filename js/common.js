@@ -1,4 +1,3 @@
-console.log("common");
 // fullpage
 $(function () {
   $("#fullpage").fullpage({
