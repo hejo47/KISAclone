@@ -77,7 +77,7 @@ Give credit here.
 
 
 ## Contact
-Created by [@mango](내 이메일주소) - 언제든지 연락주세요!
+Created by [@hejo](hejo_47@naver.com) - 언제든지 연락주세요!
 
 
 <!-- Optional -->
