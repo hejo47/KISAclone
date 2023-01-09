@@ -30,9 +30,9 @@
 - Tech 3 - ES6
 
 
-## Hierarchy
+<!-- ## Hierarchy -->
 <!-- 가능할 경우 html 구조를 트리구조로 표현 -->
-```text
+<!-- ```text
 folder1/
 └── folder2/
     ├── folder3/
@@ -41,7 +41,7 @@ folder1/
     └── folder4/
         ├── file3
         └── file4
-```
+``` -->
 
 ## Features
 - 구현기능 1:
