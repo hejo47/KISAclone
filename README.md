@@ -18,7 +18,7 @@
 
 
 ## General Information
-> 기획서 보기 [_here_](https://www.example.com/파일.pdf)
+> 기획서 보기 [_here_](img/pdf.pdf)
 - 기획서의 목차작성
 - 기획서의 내용을 간락히 요약 정리
 
