@@ -42,6 +42,9 @@ a {
   display: flex;
   flex-direction: row;
 }
+.blind {
+  display: none;
+}
 /* TOOL BAR */
 .toolbar_con {
   background-color: #fff;
