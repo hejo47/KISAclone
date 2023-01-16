@@ -4,7 +4,7 @@ document.querySelector("#layer button").addEventListener("click", () => {
 });
 
 /* SLIDE */
-let i = 0;
+let i = 0; // current slide
 const slideAction = () => {
   document.getElementsByClassName("main_slide_item")[i].classList.remove("active");
   i = i == 2 ? 0 : i + 1;
@@ -49,15 +49,16 @@ slidenext.addEventListener("click", mainSlideNextClick);
 const business1 = document.getElementsByClassName("business_1")[0];
 const business2 = document.getElementsByClassName("business_1")[1];
 const business3 = document.getElementsByClassName("business_1")[2];
+const imgArr = ["img/main/second_page_img_01.png", "img/main/second_page_img_02.png", "img/main/second_page_img_03.png"]
 const bgImg = document.querySelector(".section.second");
 const change1 = () => {
-  bgImg.style.backgroundImage = "url(img/main/second_page_img_01.png)";
+  bgImg.style.backgroundImage = `url(${imgArr[0]})`;
 };
 const change2 = () => {
-  bgImg.style.backgroundImage = "url(img/main/second_page_img_02.png)";
+  bgImg.style.backgroundImage = `url(${imgArr[1]})`;
 };
 const change3 = () => {
-  bgImg.style.backgroundImage = "url(img/main/second_page_img_03.png)";
+  bgImg.style.backgroundImage = `url(${imgArr[2]})`;
 };
 business1.addEventListener("mouseover", change1);
 business2.addEventListener("mouseover", change2);
