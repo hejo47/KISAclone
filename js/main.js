@@ -17,11 +17,11 @@ let interval = setInterval(slideAction, 5000);
 const slideprev = document.getElementById("mainSlidePrev");
 const slidepause = document.getElementById("mainSlidePause");
 const slidenext = document.getElementById("mainSlideNext");
-
+const mainSlideClassList = document.getElementsByClassName("main_slide_item")[i].classList;
 const mainSlidePrevClick = () => {
-  document.getElementsByClassName("main_slide_item")[i].classList.remove("active");
+  mainSlideClassList.remove("active");
   i = i == 0 ? 2 : i - 1;
-  document.getElementsByClassName("main_slide_item")[i].classList.add("active");
+  mainSlideClassList.add("active");
 };
 const mainSlideNextClick = () => {
   slideAction();
@@ -45,36 +45,18 @@ slideprev.addEventListener("click", mainSlidePrevClick);
 slidepause.addEventListener("click", mainSlidePauseClick);
 slidenext.addEventListener("click", mainSlideNextClick);
 
-//Section 2 마우스가 특정 아티클 부분에 있을 때 배경화면 바뀌기
-// const business1 = document.getElementsByClassName("business_1")[0];
-// const business2 = document.getElementsByClassName("business_1")[1];
-// const business3 = document.getElementsByClassName("business_1")[2];
-// const imgArr = ["img/main/second_page_img_01.png", "img/main/second_page_img_02.png", "img/main/second_page_img_03.png"]
-// const bgImg = document.querySelector(".section.second");
-// const change1 = () => {
-//   bgImg.style.backgroundImage = `url(${imgArr[0]})`;
-// };
-// const change2 = () => {
-//   bgImg.style.backgroundImage = `url(${imgArr[1]})`;
-// };
-// const change3 = () => {
-//   bgImg.style.backgroundImage = `url(${imgArr[2]})`;
-// };
-// business1.addEventListener("mouseover", change1);
-// business2.addEventListener("mouseover", change2);
-// business3.addEventListener("mouseover", change3);
+// section 2 배경 바꾸기
 const imgArr = ["img/main/second_page_img_01.png", "img/main/second_page_img_02.png", "img/main/second_page_img_03.png"]
 const bgImg = document.querySelector(".section.second");
 const business = document.getElementsByClassName("business_1");
-function addElement() {
-  for (let i = 0; i < imgArr.length; i++) {
+
+for (let i = 0; i < imgArr.length; i++) {
+  bgImg.style.backgroundImage = "url(" + imgArr[i] + ")";
+  business[i].addEventListener("mouseover", function () {
     bgImg.style.backgroundImage = "url(" + imgArr[i] + ")";
-    business[i].addEventListener("mouseover", function () {
-      bgImg.style.backgroundImage = "url(" + imgArr[i] + ")";
-    });
-  }
+  });
 }
-addElement();
+
 
 //Section2 Article1 버튼을 누르면 슬라이드
 const smallPrev = document.querySelector(".btn_wrapper .prev");
@@ -82,10 +64,11 @@ const smallNext = document.querySelector(".btn_wrapper .next");
 const smallPlay = document.querySelector(".btn_wrapper .play");
 
 let j = 0;
+const smallSliderClassList = document.getElementsByClassName("small_slider")[j];
 const smallSlideAction = () => {
-  document.getElementsByClassName("small_slider")[j].classList.remove("on");
+  smallSliderClassList.classList.remove("on");
   j = j == 3 ? 0 : j + 1;
-  document.getElementsByClassName("small_slider")[j].classList.add("on");
+  smallSliderClassList.classList.add("on");
 };
 
 let isPlay = false;
@@ -100,9 +83,9 @@ const smallPlayHandler = () => {
 };
 
 const smallPrevHandler = () => {
-  document.getElementsByClassName("small_slider")[j].classList.remove("on");
+  smallSliderClassList.remove("on");
   j = j == 0 ? 3 : j - 1;
-  document.getElementsByClassName("small_slider")[j].classList.add("on");
+  smallSliderClassList.classList.add("on");
 };
 
 const smallNextHandler = () => {
@@ -166,15 +149,16 @@ const newsNextHandler = () => {
 };
 let isNewsPause = true;
 let interval3 = setInterval(newsNextHandler, 4000);
+const newsPauseBtnClassList = newsPauseBtn.querySelector("i.newsicon").classList;
 const newsPauseHandler = () => {
   isNewsPause = !isNewsPause;
   if (!isNewsPause) {
-    newsPauseBtn.querySelector("i.newsicon").classList.remove("ri-pause-mini-fill");
-    newsPauseBtn.querySelector("i.newsicon").classList.add("ri-play-mini-fill");
+    newsPauseBtnClassList.remove("ri-pause-mini-fill");
+    newsPauseBtnClassList.add("ri-play-mini-fill");
     clearInterval(interval3);
   } else {
-    newsPauseBtn.querySelector("i.newsicon").classList.add("ri-pause-mini-fill");
-    newsPauseBtn.querySelector("i.newsicon").classList.remove("ri-play-mini-fill");
+    newsPauseBtnClassList.classList.add("ri-pause-mini-fill");
+    newsPauseBtnClassList.remove("ri-play-mini-fill");
     interval3 = setInterval(newsNextHandler, 4000);
   }
 };
@@ -209,15 +193,16 @@ const noticeNextHandler = () => {
 
 let isNoticePause = true;
 let interval4 = setInterval(noticeNextHandler, 3000);
+const noticePauseBtnClassList = noticePauseBtn.querySelector("i.noticeicon").classList;
 const noticePauseHandler = () => {
   isNoticePause = !isNoticePause;
   if (!isNoticePause) {
-    noticePauseBtn.querySelector("i.noticeicon").classList.remove("ri-pause-mini-fill");
-    noticePauseBtn.querySelector("i.noticeicon").classList.add("ri-play-mini-fill");
+    noticePauseBtnClassList.remove("ri-pause-mini-fill");
+    nnoticePauseBtnClassList.add("ri-play-mini-fill");
     clearInterval(interval4);
   } else {
-    noticePauseBtn.querySelector("i.noticeicon").classList.add("ri-pause-mini-fill");
-    noticePauseBtn.querySelector("i.noticeicon").classList.remove("ri-play-mini-fill");
+    noticePauseBtnClassList.add("ri-pause-mini-fill");
+    noticePauseBtnClassList.remove("ri-play-mini-fill");
     interval4 = setInterval(noticeNextHandler, 3000);
   }
 };
