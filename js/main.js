@@ -198,7 +198,7 @@ const noticePauseHandler = () => {
   isNoticePause = !isNoticePause;
   if (!isNoticePause) {
     noticePauseBtnClassList.remove("ri-pause-mini-fill");
-    nnoticePauseBtnClassList.add("ri-play-mini-fill");
+    noticePauseBtnClassList.add("ri-play-mini-fill");
     clearInterval(interval4);
   } else {
     noticePauseBtnClassList.add("ri-pause-mini-fill");
