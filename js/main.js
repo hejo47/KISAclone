@@ -46,23 +46,35 @@ slidepause.addEventListener("click", mainSlidePauseClick);
 slidenext.addEventListener("click", mainSlideNextClick);
 
 //Section 2 마우스가 특정 아티클 부분에 있을 때 배경화면 바뀌기
-const business1 = document.getElementsByClassName("business_1")[0];
-const business2 = document.getElementsByClassName("business_1")[1];
-const business3 = document.getElementsByClassName("business_1")[2];
+// const business1 = document.getElementsByClassName("business_1")[0];
+// const business2 = document.getElementsByClassName("business_1")[1];
+// const business3 = document.getElementsByClassName("business_1")[2];
+// const imgArr = ["img/main/second_page_img_01.png", "img/main/second_page_img_02.png", "img/main/second_page_img_03.png"]
+// const bgImg = document.querySelector(".section.second");
+// const change1 = () => {
+//   bgImg.style.backgroundImage = `url(${imgArr[0]})`;
+// };
+// const change2 = () => {
+//   bgImg.style.backgroundImage = `url(${imgArr[1]})`;
+// };
+// const change3 = () => {
+//   bgImg.style.backgroundImage = `url(${imgArr[2]})`;
+// };
+// business1.addEventListener("mouseover", change1);
+// business2.addEventListener("mouseover", change2);
+// business3.addEventListener("mouseover", change3);
 const imgArr = ["img/main/second_page_img_01.png", "img/main/second_page_img_02.png", "img/main/second_page_img_03.png"]
 const bgImg = document.querySelector(".section.second");
-const change1 = () => {
-  bgImg.style.backgroundImage = `url(${imgArr[0]})`;
-};
-const change2 = () => {
-  bgImg.style.backgroundImage = `url(${imgArr[1]})`;
-};
-const change3 = () => {
-  bgImg.style.backgroundImage = `url(${imgArr[2]})`;
-};
-business1.addEventListener("mouseover", change1);
-business2.addEventListener("mouseover", change2);
-business3.addEventListener("mouseover", change3);
+const business = document.getElementsByClassName("business_1");
+function addElement() {
+  for (let i = 0; i < imgArr.length; i++) {
+    bgImg.style.backgroundImage = "url(" + imgArr[i] + ")";
+    business[i].addEventListener("mouseover", function () {
+      bgImg.style.backgroundImage = "url(" + imgArr[i] + ")";
+    });
+  }
+}
+addElement();
 
 //Section2 Article1 버튼을 누르면 슬라이드
 const smallPrev = document.querySelector(".btn_wrapper .prev");
