@@ -17,8 +17,8 @@ let interval = setInterval(slideAction, 5000);
 const slideprev = document.getElementById("mainSlidePrev");
 const slidepause = document.getElementById("mainSlidePause");
 const slidenext = document.getElementById("mainSlideNext");
-const mainSlideClassList = document.getElementsByClassName("main_slide_item")[i].classList;
 const mainSlidePrevClick = () => {
+  const mainSlideClassList = document.getElementsByClassName("main_slide_item")[i].classList;
   mainSlideClassList.remove("active");
   i = i == 0 ? 2 : i - 1;
   mainSlideClassList.add("active");
@@ -64,11 +64,15 @@ const smallNext = document.querySelector(".btn_wrapper .next");
 const smallPlay = document.querySelector(".btn_wrapper .play");
 
 let j = 0;
-const smallSliderClassList = document.getElementsByClassName("small_slider")[j];
+const smallSlider = document.getElementsByClassName("small_slider");
 const smallSlideAction = () => {
-  smallSliderClassList.classList.remove("on");
+  // smallSliderClassList.forEach((a,b)=>{
+    // console.log(a,b);
+    smallSlider[j].classList.remove("on");
+    // console.log(smallSliderClassList);
+  // });
   j = j == 3 ? 0 : j + 1;
-  smallSliderClassList.classList.add("on");
+  smallSlider[j].classList.add("on");
 };
 
 let isPlay = false;
@@ -83,9 +87,9 @@ const smallPlayHandler = () => {
 };
 
 const smallPrevHandler = () => {
-  smallSliderClassList.remove("on");
+  smallSlider[j].classList.remove("on");
   j = j == 0 ? 3 : j - 1;
-  smallSliderClassList.classList.add("on");
+  smallSlider[j].classList.add("on");
 };
 
 const smallNextHandler = () => {
@@ -115,7 +119,6 @@ longSlideNext.addEventListener("click", longSlideNextHandler);
 const notice_menu = document.querySelector(".notice_menu_list li");
 const noticeMenuClickHandler = (li) => {
   const notice_menu_active = document.querySelector(".notice_menu_list li.active");
-  // const notice_list = document.querySelectorAll(".notice_list");
   const notice_list_on = document.querySelector(".notice_list.on");
   notice_menu_active.classList.remove("active");
   const thisID = li.getElementsByTagName("a")[0].getAttribute("href");
@@ -125,31 +128,33 @@ const noticeMenuClickHandler = (li) => {
 };
 
 // section 3 slide1
-const newsPrevBtn = document.querySelector("#news_prev");
-const newsPauseBtn = document.querySelector("#news_pause");
-const newsNextBtn = document.querySelector("#news_next");
-const newsWrap = document.querySelector(".news");
-
+const news = {
+  prev: document.querySelector("#news_prev"),
+  pause: document.querySelector("#news_pause"),
+  next: document.querySelector("#news_next"),
+  wrap: document.querySelector(".news"),
+};
 let a = 1;
 const newsPrevHandler = () => {
   a--;
-  newsWrap.style.transform += "translateX(25%)";
+  news.wrap.style.transform += "translateX(25%)";
   if (a < 1) {
-    newsWrap.style.transform = "translateX(-50%)";
+    news.wrap.style.transform = "translateX(-50%)";
     a = 3;
   }
 };
 const newsNextHandler = () => {
-  newsWrap.style.transform += "translateX(-25%)";
+  news.wrap.style.transform += "translateX(-25%)";
   a++;
   if (a > 3) {
-    newsWrap.style.transform = "translateX(0)";
+    news.wrap.style.transform = "translateX(0)";
     a = 1;
   }
 };
+
 let isNewsPause = true;
 let interval3 = setInterval(newsNextHandler, 4000);
-const newsPauseBtnClassList = newsPauseBtn.querySelector("i.newsicon").classList;
+const newsPauseBtnClassList = news.pause.querySelector("i.newsicon").classList;
 const newsPauseHandler = () => {
   isNewsPause = !isNewsPause;
   if (!isNewsPause) {
@@ -162,30 +167,30 @@ const newsPauseHandler = () => {
     interval3 = setInterval(newsNextHandler, 4000);
   }
 };
-newsPrevBtn.addEventListener("click", newsPrevHandler);
-newsPauseBtn.addEventListener("click", newsPauseHandler);
-newsNextBtn.addEventListener("click", newsNextHandler);
+news.prev.addEventListener("click", newsPrevHandler);
+news.pause.addEventListener("click", newsPauseHandler);
+news.next.addEventListener("click", newsNextHandler);
 
 // section 3 slide2
-const noticePrevBtn = document.querySelector("#notice_prev");
-const noticePauseBtn = document.querySelector("#notice_pause");
-const noticeNextBtn = document.querySelector("#notice_next");
-const noticeWrap = document.querySelector(".notice_con");
-
+const notice = {
+  prev: document.querySelector("#notice_prev"),
+  pause: document.querySelector("#notice_pause"),
+  next: document.querySelector("#notice_next"),
+  wrap: document.querySelector(".notice_con"),
+};
 let b = 1;
 const noticePrevHandler = () => {
-  noticeWrap.style.transform += "translateY(50%)";
+  notice.wrap.style.transform += "translateY(50%)";
   b--;
   if (b < 1) {
-    noticeWrap.style.transform = "translateY(-50%)";
+    notice.wrap.style.transform = "translateY(-50%)";
     b = 2;
   }
 };
-
 const noticeNextHandler = () => {
-  noticeWrap.style.transform += "translateY(-50%)";
+  notice.wrap.style.transform += "translateY(-50%)";
   if (b > 1) {
-    noticeWrap.style.transform = "translateY(0)";
+    notice.wrap.style.transform = "translateY(0)";
     b = 0;
   }
   b++;
@@ -193,7 +198,7 @@ const noticeNextHandler = () => {
 
 let isNoticePause = true;
 let interval4 = setInterval(noticeNextHandler, 3000);
-const noticePauseBtnClassList = noticePauseBtn.querySelector("i.noticeicon").classList;
+const noticePauseBtnClassList = notice.pause.querySelector("i.noticeicon").classList;
 const noticePauseHandler = () => {
   isNoticePause = !isNoticePause;
   if (!isNoticePause) {
@@ -207,6 +212,6 @@ const noticePauseHandler = () => {
   }
 };
 
-noticePrevBtn.addEventListener("click", noticePrevHandler);
-noticePauseBtn.addEventListener("click", noticePauseHandler);
-noticeNextBtn.addEventListener("click", noticeNextHandler);
+notice.prev.addEventListener("click", noticePrevHandler);
+notice.pause.addEventListener("click", noticePauseHandler);
+notice.next.addEventListener("click", noticeNextHandler);
