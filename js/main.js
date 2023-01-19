@@ -14,9 +14,11 @@ const slideAction = () => {
 let interval = setInterval(slideAction, 5000);
 
 // 슬라이드 스위치
-const slideprev = document.getElementById("mainSlidePrev");
-const slidepause = document.getElementById("mainSlidePause");
-const slidenext = document.getElementById("mainSlideNext");
+const mainSlide = {
+  prev: document.getElementById("mainSlidePrev"),
+  pause: document.getElementById("mainSlidePause"),
+  next: document.getElementById("mainSlideNext"),
+}
 const mainSlidePrevClick = () => {
   const mainSlideClassList = document.getElementsByClassName("main_slide_item")[i].classList;
   mainSlideClassList.remove("active");
@@ -41,9 +43,9 @@ const mainSlidePauseClick = () => {
   // (조건) ? T:F
 };
 
-slideprev.addEventListener("click", mainSlidePrevClick);
-slidepause.addEventListener("click", mainSlidePauseClick);
-slidenext.addEventListener("click", mainSlideNextClick);
+mainSlide.prev.addEventListener("click", mainSlidePrevClick);
+mainSlide.pause.addEventListener("click", mainSlidePauseClick);
+mainSlide.next.addEventListener("click", mainSlideNextClick);
 
 // section 2 배경 바꾸기
 const imgArr = ["img/main/second_page_img_01.png", "img/main/second_page_img_02.png", "img/main/second_page_img_03.png"]
@@ -57,20 +59,16 @@ for (let i = 0; i < imgArr.length; i++) {
   });
 }
 
-
 //Section2 Article1 버튼을 누르면 슬라이드
-const smallPrev = document.querySelector(".btn_wrapper .prev");
-const smallNext = document.querySelector(".btn_wrapper .next");
-const smallPlay = document.querySelector(".btn_wrapper .play");
-
+const smallSlide = {
+  prev: document.querySelector(".btn_wrapper .prev"),
+  next: document.querySelector(".btn_wrapper .next"),
+  play: document.querySelector(".btn_wrapper .play"),
+}
 let j = 0;
 const smallSlider = document.getElementsByClassName("small_slider");
 const smallSlideAction = () => {
-  // smallSliderClassList.forEach((a,b)=>{
-    // console.log(a,b);
     smallSlider[j].classList.remove("on");
-    // console.log(smallSliderClassList);
-  // });
   j = j == 3 ? 0 : j + 1;
   smallSlider[j].classList.add("on");
 };
@@ -96,9 +94,9 @@ const smallNextHandler = () => {
   smallSlideAction();
 };
 
-smallPrev.addEventListener("click", smallPrevHandler);
-smallNext.addEventListener("click", smallNextHandler);
-smallPlay.addEventListener("click", smallPlayHandler);
+smallSlide.prev.addEventListener("click", smallPrevHandler);
+smallSlide.next.addEventListener("click", smallNextHandler);
+smallSlide.play.addEventListener("click", smallPlayHandler);
 
 // Section 2 LONG SLIDE
 const longSlidePrev = document.querySelector(".service_btn_wrapper .prev");
