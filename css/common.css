@@ -748,4 +748,6 @@ footer {
 
 #castContents {
   color: #FFF;
+  display: flex;
+  align-items: center;
 }
