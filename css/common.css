@@ -213,7 +213,7 @@ header.pc.open .depth1.on .depth2_wrapper {
   /* transition: 0.5s ease all; */
 }
 header.pc .depth1 .depth2_wrapper {
-  height: 0;
+  /* height: 0; */
 }
 .depth2_wrapper .inner {
   width: 100%;
@@ -747,7 +747,7 @@ footer {
 }
 
 #castContents {
-  color: #FFF;
+  color: #fff;
   display: flex;
   align-items: center;
 }

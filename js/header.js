@@ -47,7 +47,7 @@ const mainHeaderEnterHandler = (depth1) => {
   mainHeader.classList.add("open");
   depth1.classList.add("on");
   document.querySelector(".overlay").style.display = "block";
-  mainHeader.style.height = headerInner.style.height;
+  mainHeader.style.height = headerInner.clientHeight;
   mainHeader.style.overflow = "hidden";
 };
 const mainHeaderLeaveHandler = (depth1) => {
